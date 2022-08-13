@@ -12,8 +12,8 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         rotateBase.Rotate(Vector3.up, Input.GetAxis("Mouse X") * speed);
-        rigidbody.AddForce(rotateBase.forward * Input.GetAxis("Vertical") * force);
-        rigidbody.AddForce(rotateBase.right * Input.GetAxis("Horizontal") * force);
+        rigidbody.AddForce(force * Input.GetAxis("Vertical") * rotateBase.forward);
+        rigidbody.AddForce(force * Input.GetAxis("Horizontal") * rotateBase.right);
     }
 
     //rotateBase.Rotate(Vector3.up, Input.GetAxis("Rotate") * speed);
