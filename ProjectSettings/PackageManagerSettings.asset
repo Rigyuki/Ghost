@@ -31,8 +31,13 @@ MonoBehaviour:
     m_Modified: 0
     m_ErrorMessage: 
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_UserModificationsInstanceId: -828
     m_OriginalInstanceId: -830
+=======
+    m_UserModificationsInstanceId: -846
+    m_OriginalInstanceId: -848
+>>>>>>> 47268292d02daee8f3d43f83092c61c2f97c9f2b
 =======
     m_UserModificationsInstanceId: -846
     m_OriginalInstanceId: -848

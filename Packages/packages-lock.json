@@ -83,6 +83,7 @@
         "com.unity.modules.imgui": "1.0.0"
       },
       "url": "https://packages.unity.cn"
+<<<<<<< HEAD
     },
     "com.unity.postprocessing": {
       "version": "3.2.2",
@@ -103,6 +104,8 @@
         "com.unity.modules.imgui": "1.0.0"
       },
       "url": "https://packages.unity.com"
+=======
+>>>>>>> 47268292d02daee8f3d43f83092c61c2f97c9f2b
     },
     "com.unity.render-pipelines.core": {
       "version": "12.1.7",
@@ -149,6 +152,7 @@
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.cn"
+<<<<<<< HEAD
     },
     "com.unity.settings-manager": {
       "version": "1.0.3",
@@ -156,6 +160,8 @@
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
+=======
+>>>>>>> 47268292d02daee8f3d43f83092c61c2f97c9f2b
     },
     "com.unity.shadergraph": {
       "version": "12.1.7",
