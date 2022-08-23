@@ -4,23 +4,35 @@ using UnityEngine;
 
 public class Wall : MonoBehaviour
 {
-    public float speed;
-    public Vector3 targetPos;
+    public float duration;
+    public Vector3 delta;
+
+    [Tooltip("Normalized movement curve over time (from 0 to 1)")]
+    public AnimationCurve curve;
+
+    Vector3 origin;
     Vector3 destination;
+    float time = 0;
+    bool state = false;
 
     private void Start()
     {
-        destination = transform.position + targetPos;
+        origin = transform.position;
+        destination = origin + delta;
     }
 
     private void Update()
     {
-        if(transform.position != destination)
-            transform.position = Vector3.MoveTowards(transform.position, destination, speed * Time.deltaTime);
+        if (!state)
+        {
+            transform.position = origin;
+        }
         else
         {
-            targetPos = -targetPos;
-            destination += targetPos;
+            var factor = curve.Evaluate(time);
+            transform.position = Vector3.Lerp(origin, destination, factor);
         }
     }
+
+    public void Activate() => state = true;
 }
