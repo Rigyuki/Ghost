@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 68f5c0a361ca75b4caf40dfbf7aeb398
+guid: 03138e6a93bcb494f92ce14aa82479f7
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,58 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: kuanmen_dizuo_1Mat
-    second: {fileID: 2100000, guid: 717f3767784946745b3fbb120e4cccb1, type: 2}
+      name: bigHouse_ding_1Mat
+    second: {fileID: 2100000, guid: 75d00c2a4add1af4e9030fd6d9f5de39, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: kuanmen_kuanqiang_1Mat
-    second: {fileID: 2100000, guid: 5962f9523863bad439e6c86b68b47a03, type: 2}
+      name: bigHouse_qiangtiMat
+    second: {fileID: 2100000, guid: fd25435451d65ba47ad969d41e8e102a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: kuanmen_men_1Mat
-    second: {fileID: 2100000, guid: 45dc7ead6154f9f41b4f61412e930246, type: 2}
+      name: bigHouse_zhuzi_dizuoMat
+    second: {fileID: 2100000, guid: 3d0b34b520c62a44e8b91d84987ee846, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: kuanmen_men_2Mat
-    second: {fileID: 2100000, guid: d5e293e1626ee084293bed4c4c769c10, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: kuanmen_taijie_1Mat
-    second: {fileID: 2100000, guid: c2f3a4947881bc14db845426fbf78a69, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: kuanmen_zhaiding_1Mat
-    second: {fileID: 2100000, guid: ba52a066d85bb12479ffb756b1882ff5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: kuanmen_zhaimending_2Mat
-    second: {fileID: 2100000, guid: ba52a066d85bb12479ffb756b1882ff5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: kuanmen_zhaimenqiang_2Mat
-    second: {fileID: 2100000, guid: 91f5e2cb7338a954ab8aad7970071cbf, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: kuanmen_zhaiqiang_1Mat
-    second: {fileID: 2100000, guid: 91f5e2cb7338a954ab8aad7970071cbf, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: kuanmending_1_kuanmenMat
-    second: {fileID: 2100000, guid: ba52a066d85bb12479ffb756b1882ff5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: pasted__surfaceShader12SG
-    second: {fileID: 2100000, guid: 45dc7ead6154f9f41b4f61412e930246, type: 2}
+      name: ding_2_bigHouseMat
+    second: {fileID: 2100000, guid: 0e1d3b2c6c0c757499fe7730ebfab7ed, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
