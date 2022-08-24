@@ -8,8 +8,8 @@ public class Trap : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        StartCoroutine(Trapping(other.transform));
-        print(other);
+        other.BroadcastMessage(nameof(Player.Frazzing), time);
+        //StartCoroutine(Trapping(other.transform));
     }
 
     IEnumerator Trapping(Transform target)

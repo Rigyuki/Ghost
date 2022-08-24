@@ -272,5 +272,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotateBase: {fileID: 3907404196901571885}
   rigidbody: {fileID: 3907404196948852959}
-  speed: 2
+  speed: 2000
   force: 50
