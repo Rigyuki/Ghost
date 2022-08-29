@@ -3,7 +3,12 @@ guid: 20fa1783e89d31443b72f0c380ed5e92
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: solidShader2
+    second: {fileID: 2100000, guid: 1c1d9e0e58f3bb54b909fc4f7dcf6819, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
