@@ -5,11 +5,12 @@ using UnityEngine;
 public class Trap : MonoBehaviour
 {
     public float time;
+    public string signal;
 
     private void OnTriggerEnter(Collider other)
     {
-        other.BroadcastMessage(nameof(Player.Frazzing), time);
-        //StartCoroutine(Trapping(other.transform));
+        other.BroadcastMessage(nameof(Player.Frazzing), time, SendMessageOptions.DontRequireReceiver);
+        SendMessageUpwards(nameof(Locker.TrapSignalReceiver), signal, SendMessageOptions.DontRequireReceiver);
     }
 
     IEnumerator Trapping(Transform target)
