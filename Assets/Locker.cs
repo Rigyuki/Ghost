@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Locker : MonoBehaviour
+public class Locker : MonoBehaviour, ISignalReceiver
 {
     public Transform outermost;
     public Transform middle;
@@ -28,19 +28,22 @@ public class Locker : MonoBehaviour
         }
     }
 
-    public void TrapSignalReceiver(string signal)
+    public void TrapSignalReceiver(object args)
     {
-        if(signal == nameof(outermost))
+        if(args is string signal)
         {
-            StartCoroutine(Rotate(outermost, Vector3.up, 45));
-        }
-        else if (signal == nameof(middle))
-        {
-            StartCoroutine(Rotate(middle, Vector3.up, 45));
-        }
-        else if (signal == nameof(innermost))
-        {
-            StartCoroutine(Rotate(innermost, Vector3.up, 45));
+            if(signal == nameof(outermost))
+            {
+                StartCoroutine(Rotate(outermost, Vector3.up, 45));
+            }
+            else if (signal == nameof(middle))
+            {
+                StartCoroutine(Rotate(middle, Vector3.up, 45));
+            }
+            else if (signal == nameof(innermost))
+            {
+                StartCoroutine(Rotate(innermost, Vector3.up, 45));
+            }
         }
     }
 }

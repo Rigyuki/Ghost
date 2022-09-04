@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, ISignalReceiver
 {
     public Transform rotateBase;
     public new Rigidbody rigidbody;
@@ -30,13 +30,13 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void Frazzing(float time)
-    {
-        frazzTime = time;
-    }
-
     private Vector3 GetDirection()
     {
         return (Input.GetAxis("Vertical")* rotateBase.forward + Input.GetAxis("Horizontal") * rotateBase.right).normalized;
+    }
+
+    public void TrapSignalReceiver(object time)
+    {
+        frazzTime = (float)time;
     }
 }

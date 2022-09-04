@@ -9,8 +9,8 @@ public class Trap : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        other.BroadcastMessage(nameof(Player.Frazzing), time, SendMessageOptions.DontRequireReceiver);
-        SendMessageUpwards(nameof(Locker.TrapSignalReceiver), signal, SendMessageOptions.DontRequireReceiver);
+        other.BroadcastMessage(nameof(ISignalReceiver.TrapSignalReceiver), time, SendMessageOptions.DontRequireReceiver);
+        SendMessageUpwards(nameof(ISignalReceiver.TrapSignalReceiver), signal, SendMessageOptions.DontRequireReceiver);
     }
 
     IEnumerator Trapping(Transform target)
