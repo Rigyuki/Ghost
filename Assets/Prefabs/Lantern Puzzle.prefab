@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5260092327373736262}
   - component: {fileID: 5260092327373736261}
   m_Layer: 0
-  m_Name: "\u706F\u8C1C"
+  m_Name: Lantern Puzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -599,7 +599,7 @@ GameObject:
   - component: {fileID: 3925978080336454443}
   - component: {fileID: 3925978080336454442}
   m_Layer: 0
-  m_Name: "\u65CB\u8F6C\u9501"
+  m_Name: Rot Lock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
