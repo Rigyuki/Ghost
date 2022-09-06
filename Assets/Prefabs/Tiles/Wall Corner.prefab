@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 3887986308251212036}
   - component: {fileID: 6841791178691608481}
   - component: {fileID: 8287140153339448338}
+  - component: {fileID: 5466106134772472677}
   m_Layer: 0
   m_Name: Wall Corner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2088829960125205801
 Transform:
@@ -96,8 +97,21 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.21163893, y: 1, z: 0.65417576}
+  m_Center: {x: 0.0014650822, y: 0, z: -0.21687269}
+--- !u!65 &5466106134772472677
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6111116899674083199}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.42851114, y: 1, z: 0.21163845}
+  m_Center: {x: 0.32384372, y: 0, z: 0.0014653206}
 --- !u!1001 &4906848121259810553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -164,6 +178,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: qiangzhuanjiao2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 467d61e9f35a95f4791e0ba527f2b4e0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976076855438005551, guid: 467d61e9f35a95f4791e0ba527f2b4e0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3046150677080583375, guid: 467d61e9f35a95f4791e0ba527f2b4e0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 467d61e9f35a95f4791e0ba527f2b4e0, type: 3}
