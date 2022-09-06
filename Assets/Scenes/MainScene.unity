@@ -21844,7 +21844,7 @@ PrefabInstance:
     - target: {fileID: 694609231357808005, guid: f3883b9c67bd94b41b0e638e908decb6,
         type: 3}
       propertyPath: m_Name
-      value: "\u9677\u9631"
+      value: Trap
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3883b9c67bd94b41b0e638e908decb6, type: 3}
@@ -21864,7 +21864,7 @@ PrefabInstance:
     - target: {fileID: 3925978080336454440, guid: 0e651aba3be0f2944bcfff82c2d5e1b5,
         type: 3}
       propertyPath: m_Name
-      value: "\u65CB\u8F6C\u9501"
+      value: Rot Lock
       objectReference: {fileID: 0}
     - target: {fileID: 3925978080336454443, guid: 0e651aba3be0f2944bcfff82c2d5e1b5,
         type: 3}
@@ -21933,7 +21933,7 @@ PrefabInstance:
     - target: {fileID: 5260092327373736260, guid: 3de167172712d434790e27ac366ec47c,
         type: 3}
       propertyPath: m_Name
-      value: "\u706F\u8C1C"
+      value: Lantern Puzzle
       objectReference: {fileID: 0}
     - target: {fileID: 5260092327373736262, guid: 3de167172712d434790e27ac366ec47c,
         type: 3}
