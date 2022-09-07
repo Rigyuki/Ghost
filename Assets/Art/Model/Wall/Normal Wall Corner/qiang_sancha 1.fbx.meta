@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9c337da716cf73446a0ae546c8cbb71d
+guid: b9a0da3cc74293745b95318d909e1fb8
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -18,7 +18,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: solidShader46
-    second: {fileID: 2100000, guid: 9134c0df113d53c458cffca85b5c3136, type: 2}
+    second: {fileID: 2100000, guid: baa2ca3ae45947f4eac5a78517ac1889, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
