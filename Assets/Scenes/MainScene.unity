@@ -21951,7 +21951,7 @@ PrefabInstance:
     - target: {fileID: 3925978080336454440, guid: 0e651aba3be0f2944bcfff82c2d5e1b5,
         type: 3}
       propertyPath: m_Name
-      value: Rot Lock
+      value: Octlock
       objectReference: {fileID: 0}
     - target: {fileID: 3925978080336454443, guid: 0e651aba3be0f2944bcfff82c2d5e1b5,
         type: 3}
