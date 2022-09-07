@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Butterfly : MonoBehaviour
+public class Butterfly : MonoBehaviour, ISignalReceiver
 {
     private UnityEngine.AI.NavMeshAgent agent;
     public GameObject target;
@@ -11,7 +11,6 @@ public class Butterfly : MonoBehaviour
     {
         //获取角色上的NavMeshAgent组件
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-        InvokeRepeating(nameof(UpdateDestination), 0, 3);
     }
 
     private void Update()
@@ -32,7 +31,7 @@ public class Butterfly : MonoBehaviour
         }
     }
 
-    void UpdateDestination()
+    public void TrapSignalReceiver(object args)
     {
         agent.SetDestination(target.transform.position);
     }

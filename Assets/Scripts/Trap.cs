@@ -10,7 +10,7 @@ public class Trap : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         other.BroadcastMessage(nameof(ISignalReceiver.TrapSignalReceiver), time, SendMessageOptions.DontRequireReceiver);
-        SendMessageUpwards(nameof(ISignalReceiver.TrapSignalReceiver), signal, SendMessageOptions.DontRequireReceiver);
+        SendMessageUpwards(nameof(ISignalReceiver.TrapSignalReceiver), signal);
     }
 
     IEnumerator Trapping(Transform target)
