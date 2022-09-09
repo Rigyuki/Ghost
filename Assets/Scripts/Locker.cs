@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Locker : MonoBehaviour, ISignalReceiver
+public class Locker : MonoBehaviour
 {
     public Transform outermost;
     public Transform middle;

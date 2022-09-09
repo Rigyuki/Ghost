@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class Butterfly : MonoBehaviour, ISignalReceiver
+public class Butterfly : MonoBehaviour
 {
     private UnityEngine.AI.NavMeshAgent agent;
     public GameObject target;
     public bool continuallyUpdated;
+
 
     void Start()
     {
@@ -34,12 +36,7 @@ public class Butterfly : MonoBehaviour, ISignalReceiver
         }
     }
 
-    void UpdateDestination()
-    {
-        agent.SetDestination(target.transform.position);
-    }
-
-    public void TrapSignalReceiver(object args)
+    public void UpdateDestination()
     {
         agent.SetDestination(target.transform.position);
     }

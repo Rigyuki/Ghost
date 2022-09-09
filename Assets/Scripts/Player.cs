@@ -3,30 +3,49 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour, ISignalReceiver
+public class Player : MonoBehaviour
 {
     public Transform rotateBase;
     public new Rigidbody rigidbody;
     public float speed;
     public float velocity;
-    private float frazzTime;
+    private float frazzTimer;
+    public float jumpForce;
+    public float jumpTime;
+    private float jumpTimer;
 
     private void Update()
     {
         rotateBase.Rotate(Vector3.up, Input.GetAxis("Mouse X") * speed * Time.deltaTime);
+        if (jumpTimer <= 0)
+        {
+            if (Input.GetKey(KeyCode.Space))
+            {
+                rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+                jumpTimer = jumpTime;
+            }
+        }
+        else
+        {
+            jumpTimer -= Time.deltaTime;
+        }
     }
 
     private void FixedUpdate()
     {
-        if (frazzTime > 0)
+        if (frazzTimer > 0)
         {
-            frazzTime -= Time.deltaTime;
+            frazzTimer -= Time.deltaTime;
         }
         else
         {
-            Vector3 diff =  GetDirection() * velocity - rigidbody.velocity;
-            Vector3 force = diff * rigidbody.mass;
-            rigidbody.AddForce(force , ForceMode.Impulse);
+            Vector3 direction = GetDirection();
+            if (direction != Vector3.zero)
+            {
+                Vector3 diff = direction * velocity - new Vector3(rigidbody.velocity.x, 0, rigidbody.velocity.z);
+                Vector3 force = diff * rigidbody.mass;
+                rigidbody.AddForce(force , ForceMode.Impulse);
+            }
         }
     }
 
@@ -35,8 +54,8 @@ public class Player : MonoBehaviour, ISignalReceiver
         return (Input.GetAxis("Vertical")* rotateBase.forward + Input.GetAxis("Horizontal") * rotateBase.right).normalized;
     }
 
-    public void TrapSignalReceiver(object time)
+    public void Frazz(float time)
     {
-        frazzTime = (float)time;
+        frazzTimer = time;
     }
 }

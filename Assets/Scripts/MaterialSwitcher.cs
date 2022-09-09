@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MaterialSwitcher : MonoBehaviour, ISignalReceiver
+public class MaterialSwitcher : MonoBehaviour
 {
     public Material on;
     public Material off;

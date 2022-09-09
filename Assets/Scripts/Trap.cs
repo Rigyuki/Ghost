@@ -1,31 +1,30 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Trap : MonoBehaviour
 {
-    public float time;
-    public string signal;
+    public UnityEvent _event;
 
     private void OnTriggerEnter(Collider other)
     {
-        other.BroadcastMessage(nameof(ISignalReceiver.TrapSignalReceiver), time, SendMessageOptions.DontRequireReceiver);
-        SendMessageUpwards(nameof(ISignalReceiver.TrapSignalReceiver), signal);
+        _event.Invoke();
     }
 
-    IEnumerator Trapping(Transform target)
-    {
-        float time = this.time;
-        while (time > 0)
-        {
-            if(target.position != transform.position)
-            {
-                Vector3 position = Vector3.MoveTowards(target.position, transform.position, Time.deltaTime*10);
-                position.y = target.position.y;
-                target.position=position;
-            }
-            time -= Time.deltaTime;
-            yield return null;
-        }
-    }
+    //IEnumerator Trapping(GameObject target, float time)
+    //{
+    //    while (time > 0)
+    //    {
+    //        if(target.transform.position != transform.position)
+    //        {
+    //            Vector3 position = Vector3.MoveTowards(target.transform.position, transform.position, Time.deltaTime*10);
+    //            position.y = target.transform.position.y;
+    //            target.transform.position=position;
+    //        }
+    //        time -= Time.deltaTime;
+    //        yield return null;
+    //    }
+    //}
 }

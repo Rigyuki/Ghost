@@ -64,7 +64,7 @@ Camera:
   m_Depth: -100
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 87
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -272,5 +272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotateBase: {fileID: 3907404196901571885}
   rigidbody: {fileID: 3907404196948852959}
-  speed: 2000
-  velocity: 0
+  speed: 0
+  velocity: 2
+  jumpForce: 2
+  jumpTime: 0
