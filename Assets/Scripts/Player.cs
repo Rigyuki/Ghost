@@ -44,14 +44,14 @@ public class Player : MonoBehaviour
             {
                 Vector3 diff = direction * velocity - new Vector3(rigidbody.velocity.x, 0, rigidbody.velocity.z);
                 Vector3 force = diff * rigidbody.mass;
-                rigidbody.AddForce(force , ForceMode.Impulse);
+                rigidbody.AddForce(force, ForceMode.Impulse);
             }
         }
     }
 
     private Vector3 GetDirection()
     {
-        return (Input.GetAxis("Vertical")* rotateBase.forward + Input.GetAxis("Horizontal") * rotateBase.right).normalized;
+        return (Input.GetAxis("Vertical") * rotateBase.forward + Input.GetAxis("Horizontal") * rotateBase.right).normalized;
     }
 
     public void Frazz(float time)
