@@ -81,7 +81,7 @@ SpriteRenderer:
   m_Size: {x: 51.65, y: 51.397804}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1333704927614763129
@@ -165,7 +165,7 @@ SpriteRenderer:
   m_Size: {x: 51.65, y: 51.397804}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2054133753235853771
@@ -249,7 +249,7 @@ SpriteRenderer:
   m_Size: {x: 51.65, y: 51.397804}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2277166217360895483
@@ -1064,6 +1064,41 @@ PrefabInstance:
       propertyPath: signal
       value: innermost
       objectReference: {fileID: 0}
+    - target: {fileID: 2437176923307851394, guid: f3883b9c67bd94b41b0e638e908decb6,
+        type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437176923307851394, guid: f3883b9c67bd94b41b0e638e908decb6,
+        type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437176923307851394, guid: f3883b9c67bd94b41b0e638e908decb6,
+        type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3925978080336454442}
+    - target: {fileID: 2437176923307851394, guid: f3883b9c67bd94b41b0e638e908decb6,
+        type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437176923307851394, guid: f3883b9c67bd94b41b0e638e908decb6,
+        type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RotateInner
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437176923307851394, guid: f3883b9c67bd94b41b0e638e908decb6,
+        type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Locker, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437176923307851394, guid: f3883b9c67bd94b41b0e638e908decb6,
+        type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3883b9c67bd94b41b0e638e908decb6, type: 3}
 --- !u!4 &4600531650066669688 stripped
@@ -1154,6 +1189,41 @@ PrefabInstance:
       propertyPath: signal
       value: middle
       objectReference: {fileID: 0}
+    - target: {fileID: 2437176923307851394, guid: f3883b9c67bd94b41b0e638e908decb6,
+        type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437176923307851394, guid: f3883b9c67bd94b41b0e638e908decb6,
+        type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437176923307851394, guid: f3883b9c67bd94b41b0e638e908decb6,
+        type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3925978080336454442}
+    - target: {fileID: 2437176923307851394, guid: f3883b9c67bd94b41b0e638e908decb6,
+        type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437176923307851394, guid: f3883b9c67bd94b41b0e638e908decb6,
+        type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RotateMiddle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437176923307851394, guid: f3883b9c67bd94b41b0e638e908decb6,
+        type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Locker, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437176923307851394, guid: f3883b9c67bd94b41b0e638e908decb6,
+        type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3883b9c67bd94b41b0e638e908decb6, type: 3}
 --- !u!4 &4600531650062058355 stripped
@@ -1243,6 +1313,41 @@ PrefabInstance:
         type: 3}
       propertyPath: signal
       value: outermost
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437176923307851394, guid: f3883b9c67bd94b41b0e638e908decb6,
+        type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437176923307851394, guid: f3883b9c67bd94b41b0e638e908decb6,
+        type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437176923307851394, guid: f3883b9c67bd94b41b0e638e908decb6,
+        type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3925978080336454442}
+    - target: {fileID: 2437176923307851394, guid: f3883b9c67bd94b41b0e638e908decb6,
+        type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437176923307851394, guid: f3883b9c67bd94b41b0e638e908decb6,
+        type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RotateOuter
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437176923307851394, guid: f3883b9c67bd94b41b0e638e908decb6,
+        type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Locker, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2437176923307851394, guid: f3883b9c67bd94b41b0e638e908decb6,
+        type: 3}
+      propertyPath: _event.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3883b9c67bd94b41b0e638e908decb6, type: 3}

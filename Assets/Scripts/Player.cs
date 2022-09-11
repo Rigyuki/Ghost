@@ -51,7 +51,8 @@ public class Player : MonoBehaviour
 
     private Vector3 GetDirection()
     {
-        return (Input.GetAxis("Vertical") * rotateBase.forward + Input.GetAxis("Horizontal") * rotateBase.right).normalized;
+        // return (Input.GetAxis("Vertical") * rotateBase.forward + Input.GetAxis("Horizontal") * rotateBase.right).normalized;
+        return (Input.GetAxis("Vertical") * transform.right - Input.GetAxis("Horizontal") * transform.forward).normalized;
     }
 
     public void Frazz(float time)

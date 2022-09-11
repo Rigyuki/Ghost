@@ -28,22 +28,7 @@ public class Locker : MonoBehaviour
         }
     }
 
-    public void TrapSignalReceiver(object args)
-    {
-        if(args is string signal)
-        {
-            if(signal == nameof(outermost))
-            {
-                StartCoroutine(Rotate(outermost, Vector3.up, 45));
-            }
-            else if (signal == nameof(middle))
-            {
-                StartCoroutine(Rotate(middle, Vector3.up, 45));
-            }
-            else if (signal == nameof(innermost))
-            {
-                StartCoroutine(Rotate(innermost, Vector3.up, 45));
-            }
-        }
-    }
+    public void RotateOuter() => StartCoroutine(Rotate(outermost, Vector3.up, 45));
+    public void RotateMiddle() => StartCoroutine(Rotate(middle, Vector3.up, 45));
+    public void RotateInner() => StartCoroutine(Rotate(innermost, Vector3.up, 45));
 }
