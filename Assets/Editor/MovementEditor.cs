@@ -11,7 +11,7 @@ public class MovementEditor : Editor
     {
         DrawDefaultInspector();
         MovementController movementController = (MovementController)target;
-        if (GUILayout.Button("添加关键帧"))
+        if (GUILayout.Button("Add Key Frame"))
         {
             movementController.movements.Add(AddMovement(movementController));
             movementController.movements = movementController.movements;

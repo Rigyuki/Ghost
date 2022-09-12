@@ -20,8 +20,8 @@ public class MovementController : MonoBehaviour
     private IEnumerator enumerator;
     private int index;
 
-    //For Editor
-    [Header("添加关键帧")]
+    // For Editor
+    [Header("Add Key Frame")]
     public AnimationCurve curve;
 
     private void Update()
