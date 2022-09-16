@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6230079914940571369}
   - component: {fileID: 7051066062822641996}
   - component: {fileID: 5061655036871566726}
+  - component: {fileID: 4859866842129353992}
   m_Layer: 0
   m_Name: qiao
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4859866842129353992
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6718913247315248211}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2388776741651201658, guid: e9b2ca1aba7140b479ed472fc923899c, type: 3}

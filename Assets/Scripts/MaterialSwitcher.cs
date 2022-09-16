@@ -7,19 +7,16 @@ public class MaterialSwitcher : MonoBehaviour
     public Material on;
     public Material off;
 
-    public void TrapSignalReceiver(object args)
+    public void Switch(string args)
     {
-        if(args is string stringArgs)
+        string[] ids = args.Split();
+        foreach(string id in ids)
         {
-            string[] ids = stringArgs.Split();
-            foreach(string id in ids)
-            {
-                Material target = transform.Find(id).GetComponent<MeshRenderer>().sharedMaterial;
-                if (target == on)
-                    transform.Find(id).GetComponent<MeshRenderer>().material = off;
-                else
-                    transform.Find(id).GetComponent<MeshRenderer>().material = on;
-            }
+            Material target = transform.Find(id).GetComponent<MeshRenderer>().sharedMaterial;
+            if (target == on)
+                transform.Find(id).GetComponent<MeshRenderer>().material = off;
+            else
+                transform.Find(id).GetComponent<MeshRenderer>().material = on;
         }
     }
 }
