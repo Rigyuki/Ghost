@@ -1,50 +1,53 @@
 using UnityEngine;
 
-public static class FloatExtensions
+namespace Scripts.Utils
 {
-    public static float Fallout(this float origin, float target, float fallout)
+    public static class FloatExtensions
     {
-        return Mathf.Lerp(origin, target, 1 - Mathf.Exp(-fallout * Time.deltaTime));
+        public static float Fallout(this float origin, float target, float fallout)
+        {
+            return Mathf.Lerp(origin, target, 1 - Mathf.Exp(-fallout * Time.deltaTime));
+        }
+
+        public static float FalloutFixed(this float origin, float target, float fallout)
+        {
+            return Mathf.Lerp(origin, target, 1 - Mathf.Exp(-fallout * Time.fixedDeltaTime));
+        }
+
+        public static float FalloutUnscaled(this float origin, float target, float fallout)
+        {
+            return Mathf.Lerp(origin, target, 1 - Mathf.Exp(-fallout * Time.unscaledDeltaTime));
+        }
     }
 
-    public static float FalloutFixed(this float origin, float target, float fallout)
+    public static class Vector3Extensions
     {
-        return Mathf.Lerp(origin, target, 1 - Mathf.Exp(-fallout * Time.fixedDeltaTime));
+        public static Vector3 Fallout(this Vector3 origin, Vector3 target, float fallout)
+        {
+            return Vector3.Lerp(origin, target, 1 - Mathf.Exp(-fallout * Time.deltaTime));
+        }
+
+        public static Vector3 FalloutFixed(this Vector3 origin, Vector3 target, float fallout)
+        {
+            return Vector3.Lerp(origin, target, 1 - Mathf.Exp(-fallout * Time.fixedDeltaTime));
+        }
+
+        public static Vector3 FalloutUnscaled(this Vector3 origin, Vector3 target, float fallout)
+        {
+            return Vector3.Lerp(origin, target, 1 - Mathf.Exp(-fallout * Time.unscaledDeltaTime));
+        }
     }
 
-    public static float FalloutUnscaled(this float origin, float target, float fallout)
+    public static class QuaternionExtensions
     {
-        return Mathf.Lerp(origin, target, 1 - Mathf.Exp(-fallout * Time.unscaledDeltaTime));
-    }
-}
+        public static Quaternion Fallout(this Quaternion origin, Quaternion target, float fallout)
+        {
+            return Quaternion.Slerp(origin, target, 1 - Mathf.Exp(-fallout * Time.deltaTime));
+        }
 
-public static class Vector3Extensions
-{
-    public static Vector3 Fallout(this Vector3 origin, Vector3 target, float fallout)
-    {
-        return Vector3.Lerp(origin, target, 1 - Mathf.Exp(-fallout * Time.deltaTime));
-    }
-
-    public static Vector3 FalloutFixed(this Vector3 origin, Vector3 target, float fallout)
-    {
-        return Vector3.Lerp(origin, target, 1 - Mathf.Exp(-fallout * Time.fixedDeltaTime));
-    }
-
-    public static Vector3 FalloutUnscaled(this Vector3 origin, Vector3 target, float fallout)
-    {
-        return Vector3.Lerp(origin, target, 1 - Mathf.Exp(-fallout * Time.unscaledDeltaTime));
-    }
-}
-
-public static class QuaternionExtensions
-{
-    public static Quaternion Fallout(this Quaternion origin, Quaternion target, float fallout)
-    {
-        return Quaternion.Slerp(origin, target, 1 - Mathf.Exp(-fallout * Time.deltaTime));
-    }
-
-    public static Quaternion FalloutUnscaled(this Quaternion origin, Quaternion target, float fallout)
-    {
-        return Quaternion.Slerp(origin, target, 1 - Mathf.Exp(-fallout * Time.unscaledDeltaTime));
+        public static Quaternion FalloutUnscaled(this Quaternion origin, Quaternion target, float fallout)
+        {
+            return Quaternion.Slerp(origin, target, 1 - Mathf.Exp(-fallout * Time.unscaledDeltaTime));
+        }
     }
 }
