@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b235271fd5fbf459c467562459aafc, type: 3}
+  m_Name: GList_SO
+  m_EditorClassIdentifier: 
+  ghostitemDetails:
+  - ghostType: 0
+    gSprite: {fileID: 21300000, guid: b0629099b3a144e4c91e4ee0c5ae6ec5, type: 3}
+  - ghostType: 1
+    gSprite: {fileID: 21300000, guid: 3aae467f0ebaaec4c85f85b05fce73e8, type: 3}
+  - ghostType: 2
+    gSprite: {fileID: 21300000, guid: 86daa6313a033ca439c4144cb3409e21, type: 3}
