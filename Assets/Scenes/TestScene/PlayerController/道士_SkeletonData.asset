@@ -27,5 +27,5 @@ MonoBehaviour:
   fromAnimation: []
   toAnimation: []
   duration: []
-  defaultMix: 0.2
-  controller: {fileID: 0}
+  defaultMix: 0
+  controller: {fileID: 9100000, guid: 76735dc4c4adcb146b8363faa6c7bc55, type: 2}

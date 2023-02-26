@@ -3,6 +3,7 @@ using Scripts.Utils;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityGameFramework.Runtime;
 
 namespace Scripts.Gameplay.Basic
 {
@@ -22,12 +23,14 @@ namespace Scripts.Gameplay.Basic
         Vector3 horizontalVelocity = Vector3.zero;
         Vector3 currentVelocity = Vector3.zero;
         Vector3 targetVelocity;
+        bool walking;
 
         int facing = 1;//1=前，2=后;4=左，8=右
 
         [Header("地面检测")]
         public LayerMask groundLayers;
         public float groundTestDistance = 2f;
+        bool grounded = true;
 
         #endregion
 
@@ -94,6 +97,7 @@ namespace Scripts.Gameplay.Basic
         #endregion
 
         #region interact
+        [Header("交互")]
         [SerializeField] KeyCode interactKey = KeyCode.E;
         #endregion
 
@@ -123,6 +127,26 @@ namespace Scripts.Gameplay.Basic
                     targetObject = hit.collider.gameObject;
                 }
             }
+        }
+        #endregion
+
+        #region animation
+        [Header("动画")]
+        [SerializeField] AnimationPlayer animationPlayer;
+        public string idle_base = "daoshi_stand";
+        public string walk_base = "daoshi_walk";
+        public string jump_base = "daoshi_jump";
+        public string run_base = "daoshi_run";
+        void SetAnimation()
+        {
+            if (dashing)
+                animationPlayer.Play(0, run_base, facing, true);
+            else if (!grounded)
+                animationPlayer.Play(0, jump_base, facing, false);
+            else if (walking)
+                animationPlayer.Play(0, walk_base, facing, true);
+            else
+                animationPlayer.Play(0, idle_base, facing, true);
         }
         #endregion
 
@@ -156,7 +180,7 @@ namespace Scripts.Gameplay.Basic
         {
             RaycastHit hit;
             Ray ray = new Ray(transform.position + controller.center, Vector3.down);
-            Physics.Raycast(ray, out hit, groundTestDistance, groundLayers);
+            grounded = Physics.Raycast(ray, out hit, groundTestDistance, groundLayers);
 
             var platform = hit.collider?.GetComponentInChildren<Platform>();
 
@@ -174,6 +198,7 @@ namespace Scripts.Gameplay.Basic
         {
             targetVelocity = Vector3.zero;
             var axis = Axis;
+            walking = axis.magnitude != 0;
             ChangeFacing(axis);
             CheckPlatform();
             Dash();
@@ -223,6 +248,7 @@ namespace Scripts.Gameplay.Basic
             {
                 currentVelocity.y = 0;
             }
+            SetAnimation();
             controller.Move(currentVelocity * Time.deltaTime);
         }
 
