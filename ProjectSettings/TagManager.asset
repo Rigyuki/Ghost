@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Movable
+  - VineTrap
+  - TreeTrap
   layers:
   - Default
   - TransparentFX

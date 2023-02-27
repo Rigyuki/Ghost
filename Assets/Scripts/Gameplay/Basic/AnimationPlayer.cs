@@ -9,6 +9,7 @@ namespace Scripts.Gameplay.Basic
     public class AnimationPlayer : MonoBehaviour
     {
         SkeletonAnimation sa;
+        bool dontInterrupt;
         private void Awake()
         {
             sa = GetComponent<SkeletonAnimation>();
@@ -32,8 +33,13 @@ namespace Scripts.Gameplay.Basic
             }
             return baseName;
         }
-        public void Play(int track, string nameBase, int facing, bool loop)
+        public void Play(int track, string nameBase, int facing, bool loop, bool dontInterrupt = false)
         {
+            if (dontInterrupt)
+                this.dontInterrupt = false;
+            if (this.dontInterrupt && !sa.state.GetCurrent(0).IsComplete)
+                return;
+            this.dontInterrupt = dontInterrupt;
             string animName = AddSuffix(nameBase, facing);
             if (sa.state.GetCurrent(track).Animation.Name == animName)
                 return;

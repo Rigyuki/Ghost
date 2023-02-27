@@ -14,6 +14,8 @@ namespace Scripts.Gameplay.Basic
 
         CharacterController controller;
 
+        bool hit;
+
         #region movement
 
         [Header("移动")]
@@ -59,6 +61,7 @@ namespace Scripts.Gameplay.Basic
         void Freeze(Buff buff)
         {
             frozen = true;
+            animationPlayer.Play(0, hit_base, facing, false, true);
         }
         void Unfreeze(Buff buff)
         {
@@ -139,8 +142,11 @@ namespace Scripts.Gameplay.Basic
         public string walk_base = "daoshi_walk";
         public string jump_base = "daoshi_jump";
         public string run_base = "daoshi_run";
+        public string hit_base = "daoshi_shouji";
         void SetAnimation()
         {
+            if (frozen)
+                return;
             if (dashing)
                 animationPlayer.Play(0, run_base, facing, true);
             else if (!grounded)

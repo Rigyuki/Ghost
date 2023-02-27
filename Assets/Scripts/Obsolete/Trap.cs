@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 namespace Scripts.Gameplay.Basic
 {
+    [Obsolete]
     public class Trap : MonoBehaviour
     {
         public UnityEvent _event;
