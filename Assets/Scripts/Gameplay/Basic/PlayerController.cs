@@ -10,6 +10,8 @@ namespace Scripts.Gameplay.Basic
     [RequireComponent(typeof(CharacterController))]
     public class PlayerController : CharacterBase
     {
+        public static int redButterfly = 0;
+
         CharacterController controller;
 
         #region movement

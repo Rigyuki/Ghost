@@ -1,0 +1,48 @@
+
+hudie.png
+size: 639,639
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+2
+  rotate: true
+  xy: 354, 434
+  size: 203, 282
+  orig: 203, 291
+  offset: 0, 7
+  index: -1
+4
+  rotate: false
+  xy: 2, 21
+  size: 349, 301
+  orig: 489, 436
+  offset: 115, 0
+  index: -1
+5
+  rotate: false
+  xy: 353, 63
+  size: 118, 164
+  orig: 118, 164
+  offset: 0, 0
+  index: -1
+光晕弱
+  rotate: false
+  xy: 2, 324
+  size: 350, 313
+  orig: 422, 447
+  offset: 47, 0
+  index: -1
+翅膀左
+  rotate: true
+  xy: 354, 229
+  size: 203, 282
+  orig: 203, 291
+  offset: 0, 7
+  index: -1
+身体
+  rotate: true
+  xy: 473, 109
+  size: 118, 164
+  orig: 118, 164
+  offset: 0, 0
+  index: -1
