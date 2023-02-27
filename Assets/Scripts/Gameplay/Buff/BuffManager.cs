@@ -9,7 +9,7 @@ namespace Scripts.Gameplay.BuffSystem
 {
     public class BuffManager : MonoSingleton<BuffManager>
     {
-        List<Buff> buffs;
+        List<Buff> buffs = new List<Buff>();
         public void Register(Buff buff)
         {
             buffs.Add(buff);
@@ -20,9 +20,9 @@ namespace Scripts.Gameplay.BuffSystem
         }
         private void Update()
         {
-            foreach(Buff buff in buffs)
+            for (int i = buffs.Count - 1; i >= 0; --i)
             {
-                buff.Tick(Time.deltaTime);
+                buffs[i].Tick(Time.deltaTime);
             }
         }
     }

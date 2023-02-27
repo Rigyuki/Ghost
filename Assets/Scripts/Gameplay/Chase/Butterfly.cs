@@ -1,46 +1,55 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Scripts.Gameplay.Chase
 {
     public class Butterfly : MonoBehaviour
     {
-        private UnityEngine.AI.NavMeshAgent agent;
-        public GameObject target;
-        public bool continuallyUpdated;
-
-
-        void Start()
+        public bool isYellowButterfly;
+        public Transform follower;
+        public float speed;
+        public float slowSpeed;
+        public List<Vector3> positions = new List<Vector3>();
+        public float maxDistance;
+        int targetPosition;
+        bool started = false;
+        bool finished = false;
+        private void Awake()
         {
-            //获取角色上的NavMeshAgent组件
-            agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-            if (continuallyUpdated)
-                InvokeRepeating(nameof(UpdateDestination), 5, 1);
+            transform.position = positions[0];
         }
-
+        private float Distance()
+        {
+            return Vector2.Distance(new Vector2(follower.position.x, follower.position.z), new Vector2(transform.position.x, transform.position.z));
+        }
         private void Update()
         {
-            //鼠标左键
-            if (Input.GetMouseButtonDown(0))
+            if (!started || finished)
+                return;
+            transform.Translate((positions[targetPosition] - transform.position).normalized * Time.deltaTime * (Distance() < maxDistance ? speed : slowSpeed));
+            if (Vector3.Distance(positions[targetPosition], transform.position) < 0.01f)
             {
-                //射线检测
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                RaycastHit hit;
-                bool isCollider = Physics.Raycast(ray, out hit);
-                if (isCollider)
-                {
-                    //hit.point射线触碰的Position
-                    //SetDestination设置下一步的位置
-                    agent.SetDestination(hit.point);
-                }
+                ++targetPosition;
+                if (targetPosition == positions.Count)
+                    Disappear();
             }
         }
-
-        public void UpdateDestination()
+        public void Disappear()
         {
-            agent.SetDestination(target.transform.position);
+            finished = true;
+            Destroy(gameObject);
+        }
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
+            {
+                started = true;
+            }
+            if (isYellowButterfly)
+                ++Basic.PlayerController.redButterfly;
+            ButterflySelectedSubject.Instance.Notify(this);
+            Destroy(GetComponent<Collider>());
         }
     }
 }
