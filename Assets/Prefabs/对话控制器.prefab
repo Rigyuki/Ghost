@@ -71,7 +71,8 @@ MonoBehaviour:
     <alpha=#00>\u770B\u4E0D\u89C1<alpha=#FF>\n<align=\"left\">\u5DE6\u5BF9\u9F50</align>\r\n<align=\"center\">\u5C45\u4E2D</align>\r\n<align=\"right\">\u53F3\u5BF9\u9F50</align>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ad96fbc860fe8894b8525c7ea52ecb2d, type: 2}
-  m_sharedMaterial: {fileID: -1535748009954672635, guid: ad96fbc860fe8894b8525c7ea52ecb2d, type: 2}
+  m_sharedMaterial: {fileID: -1535748009954672635, guid: ad96fbc860fe8894b8525c7ea52ecb2d,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -281,7 +282,7 @@ MonoBehaviour:
   text: {fileID: 1046441328410803689}
   left: {fileID: 1046441330120000946}
   right: {fileID: 1046441329437256837}
-  dialogueData: {fileID: 0}
+  dialogueData: {fileID: 11400000, guid: 877c2b1d05e0bcc4b875c3ee8c910b45, type: 2}
   pointer: 0
 --- !u!114 &1046441328749723830
 MonoBehaviour:
@@ -485,7 +486,8 @@ MonoBehaviour:
     <color=\"blue\">\u84DD\u8272, <color=\"green\">\u7EFF\u8272, </color>\u6062\u590D\u4E0A\u4E00\u4E2A\u989C\u8272"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ad96fbc860fe8894b8525c7ea52ecb2d, type: 2}
-  m_sharedMaterial: {fileID: -1535748009954672635, guid: ad96fbc860fe8894b8525c7ea52ecb2d, type: 2}
+  m_sharedMaterial: {fileID: -1535748009954672635, guid: ad96fbc860fe8894b8525c7ea52ecb2d,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
