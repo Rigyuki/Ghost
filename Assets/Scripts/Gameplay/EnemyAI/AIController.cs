@@ -16,22 +16,25 @@ public class AIController : MonoBehaviour
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        agent.SetDestination(target.position);
     }
+
 
     private void Update()
     {
-        if(temp % updatePerXFrames != 0)
+       
+        if (temp % updatePerXFrames != 0)
         {
             ++temp;
             return;
         }
         temp = 1;
-        foreach (NavMeshSurface surface in naveMeshSurfaces)
-        {
-            surface.BuildNavMesh();
-        }
-
+        //foreach (NavMeshSurface surface in naveMeshSurfaces)
+        //{
+        //    surface.BuildNavMesh();
+        //}
         agent.SetDestination(target.position);
+
     }
 
 }
