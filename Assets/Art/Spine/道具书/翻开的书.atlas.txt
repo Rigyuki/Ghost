@@ -1,0 +1,82 @@
+
+翻开的书.png
+size: 2047,2047
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+book_1
+  rotate: true
+  xy: 1102, 80
+  size: 660, 805
+  orig: 898, 960
+  offset: 126, 74
+  index: -1
+book_2
+  rotate: false
+  xy: 2, 2
+  size: 1098, 738
+  orig: 1098, 781
+  offset: 0, 0
+  index: -1
+branch_2
+  rotate: false
+  xy: 1307, 1233
+  size: 612, 812
+  orig: 612, 812
+  offset: 0, 0
+  index: -1
+flower_7
+  rotate: false
+  xy: 1610, 930
+  size: 145, 140
+  orig: 147, 140
+  offset: 2, 0
+  index: -1
+flower_8
+  rotate: false
+  xy: 1307, 818
+  size: 137, 116
+  orig: 139, 126
+  offset: 1, 1
+  index: -1
+flower_9
+  rotate: true
+  xy: 1610, 1072
+  size: 159, 157
+  orig: 162, 157
+  offset: 3, 0
+  index: -1
+light
+  rotate: false
+  xy: 2, 742
+  size: 1303, 1303
+  orig: 1332, 1332
+  offset: 14, 15
+  index: -1
+liusu_2
+  rotate: false
+  xy: 1307, 936
+  size: 301, 295
+  orig: 301, 295
+  offset: 0, 0
+  index: -1
+
+翻开的书2.png
+size: 1127,1127
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+page_l
+  rotate: true
+  xy: 585, 479
+  size: 646, 540
+  orig: 646, 567
+  offset: 0, 0
+  index: -1
+page_r
+  rotate: false
+  xy: 2, 467
+  size: 581, 658
+  orig: 753, 801
+  offset: 110, 29
+  index: -1

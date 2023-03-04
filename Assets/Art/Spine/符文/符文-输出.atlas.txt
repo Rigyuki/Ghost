@@ -1,0 +1,97 @@
+
+符文-输出.png
+size: 1696,1696
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dai_1
+  rotate: false
+  xy: 2, 1574
+  size: 1607, 68
+  orig: 1637, 68
+  offset: 9, 0
+  index: -1
+dai_2
+  rotate: false
+  xy: 2, 1504
+  size: 955, 68
+  orig: 980, 68
+  offset: 8, 0
+  index: -1
+guangci
+  rotate: true
+  xy: 1200, 909
+  size: 663, 494
+  orig: 683, 502
+  offset: 14, 7
+  index: -1
+guangyun
+  rotate: false
+  xy: 959, 1333
+  size: 239, 239
+  orig: 249, 249
+  offset: 5, 5
+  index: -1
+guangzhao_1
+  rotate: true
+  xy: 2, 1230
+  size: 272, 650
+  orig: 276, 773
+  offset: 2, 56
+  index: -1
+point
+  rotate: true
+  xy: 2, 1663
+  size: 31, 32
+  orig: 33, 34
+  offset: 1, 1
+  index: -1
+zhou_1
+  rotate: true
+  xy: 140, 1650
+  size: 44, 94
+  orig: 47, 97
+  offset: 2, 1
+  index: -1
+zhou_2
+  rotate: true
+  xy: 432, 1646
+  size: 48, 119
+  orig: 51, 123
+  offset: 2, 2
+  index: -1
+zhou_3
+  rotate: true
+  xy: 343, 1648
+  size: 46, 87
+  orig: 50, 91
+  offset: 2, 2
+  index: -1
+zhou_4
+  rotate: true
+  xy: 36, 1651
+  size: 43, 102
+  orig: 45, 106
+  offset: 1, 2
+  index: -1
+zhou_5
+  rotate: true
+  xy: 553, 1644
+  size: 50, 219
+  orig: 53, 223
+  offset: 1, 1
+  index: -1
+zhou_6
+  rotate: true
+  xy: 236, 1649
+  size: 45, 105
+  orig: 48, 109
+  offset: 1, 2
+  index: -1
+zhou_7
+  rotate: true
+  xy: 774, 1644
+  size: 50, 263
+  orig: 54, 266
+  offset: 1, 1
+  index: -1

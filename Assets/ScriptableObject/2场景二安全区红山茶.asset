@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 684451088bde5a14abae86b42c81c2db, type: 3}
+  m_Name: "2\u573A\u666F\u4E8C\u5B89\u5168\u533A\u7EA2\u5C71\u8336"
+  m_EditorClassIdentifier: 
+  dialogues:
+  - title: "\u7EDB\u96EA"
+    dialogue: "\u9053\u957F\u597D\u773C\u529B\uFF0C\u80FD\u8BC6\u7834\u6B64\u9635\u3002"
+    onLeftSide: 1
+    portrait: {fileID: 0}
+  - title: "\u9053\u58EB"
+    dialogue: "\u7EDB\u96EA\u59D1\u5A18\u679C\u771F\u4E5F\u5728\u6B64\u5904\u3002"
+    onLeftSide: 0
+    portrait: {fileID: 0}
+  - title: "\u7EDB\u96EA"
+    dialogue: "\u4F60\u53EF\u662F\u89C1\u5230\u9999\u7389\u4E86\uFF1F"
+    onLeftSide: 1
+    portrait: {fileID: 0}
+  - title: "\u9053\u58EB"
+    dialogue: "\u6B63\u662F\uFF0C\u9999\u7389\u5A18\u5B50\u8A00\u9053\u8981\u6C38\u7720\u4E8E\u6B64\uFF0C\u4E0E\u5FC3\u4E0A\u4EBA\u68A6\u91CC\u76F8\u805A\u3002"
+    onLeftSide: 0
+    portrait: {fileID: 0}
+  - title: "\u7EDB\u96EA"
+    dialogue: "\uFF08\u82E6\u7B11\uFF09\u5475\uFF0C\u597D\u4E00\u4E2A\u68A6\u91CC\u76F8\u4F1A\u3002\u5230\u5934\u6765\uFF0C\u6211\u53EA\u662F\u4E3A\u4ED6\u4EBA\u505A\u5AC1\u8863\u7F62\u4E86\uFF0C\u6211\u53C8\u4F55\u5C1D\u4E0D\u662F\u56F0\u4E8E\u8FD9\u5E7B\u5883\u4E4B\u4E2D\n\u5462\uFF1F"
+    onLeftSide: 1
+    portrait: {fileID: 0}
+  - title: "\u7EDB\u96EA"
+    dialogue: "\u8FD9\u7247\u6B8B\u9875\u662F\u6211\u673A\u7F18\u5DE7\u5408\u4E4B\u4E0B\u5076\u5F97\uFF0C\u8D60\u4E0E\u9053\u957F\uFF0C\u5C31\u5F53\u505A\u662F\u4F60\u89E3\u6551\u6211\u7684\u8C22\u793C\u7F62\u3002"
+    onLeftSide: 1
+    portrait: {fileID: 0}
+  - title: "\u7EDB\u96EA"
+    dialogue: "\u6B64\u540E\u79CD\u79CD\uFF0C\u8B6C\u5982\u4ECA\u65E5\u751F\u3002"
+    onLeftSide: 0
+    portrait: {fileID: 0}
+  filename: "2\u573A\u666F\u4E8C\u5B89\u5168\u533A\u7EA2\u5C71\u8336.csv"

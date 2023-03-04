@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 684451088bde5a14abae86b42c81c2db, type: 3}
+  m_Name: "2\u573A\u666F\u4E8C\u5B89\u5168\u533A\u767D\u7261\u4E39"
+  m_EditorClassIdentifier: 
+  dialogues:
+  - title: "\u9053\u58EB"
+    dialogue: "\u9999\u7389\u5A18\u5B50\uFF0C\u600E\u4E48\u4F1A\u5728\u6B64\u5730\uFF1F"
+    onLeftSide: 1
+    portrait: {fileID: 0}
+  - title: "\u9999\u7389"
+    dialogue: "\u59BE\u8EAB\u672C\u5C31\u662F\u4E00\u7F15\u5B64\u9B42\uFF0C\u4F9D\u9760\u7740\u5BF9\u5FC3\u4E0A\u4EBA\u7684\u75F4\u60C5\u82DF\u5EF6\u6B8B\u5598\u3002"
+    onLeftSide: 0
+    portrait: {fileID: 0}
+  - title: "\u9999\u7389"
+    dialogue: "\u59BE\u8EAB\u660E\u767D\u6B64\u751F\u5DF2\u4E0E\u4ED6\u65E0\u7F18\u518D\u4F1A\uFF0C\u5982\u4ECA\u552F\u4E00\u7684\u5FF5\u60F3\u4FBF\u662F\u6B64\u8EAB\u4E8E\u957F\u68A6\u4E2D\u6C38\u7720\uFF0C\u4E8E\u534E\u80E5\u540C\u5FC3\u4E0A\u4EBA\u76F8\u4F1A\u3002"
+    onLeftSide: 1
+    portrait: {fileID: 0}
+  - title: "\u767D\u7261\u4E39"
+    dialogue: "\u8C22\u8FC7\u9053\u957F\u5C06\u59BE\u8EAB\u9B42\u9B44\u4ECE\u7261\u4E39\u4E2D\u89E3\u6551\uFF0C\u8FD9\u679A\u6B8B\u9875\u8D60\u4E0E\u4F60\uFF0C\u671B\u65E5\u540E\u8BB8\u80FD\u52A9\u9053\u957F\u4E00\u81C2\u4E4B\u529B\u3002"
+    onLeftSide: 0
+    portrait: {fileID: 0}
+  filename: "2\u573A\u666F\u4E8C\u5B89\u5168\u533A\u767D\u7261\u4E39.csv"

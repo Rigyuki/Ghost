@@ -43,6 +43,8 @@ namespace Scripts.Gameplay.Basic
             string animName = AddSuffix(nameBase, facing);
             if (sa.state.GetCurrent(track).Animation.Name == animName)
                 return;
+            sa.Skeleton.SetToSetupPose();
+            sa.AnimationState.ClearTracks();
             sa.state.SetAnimation(track, animName, loop);
         }
     }

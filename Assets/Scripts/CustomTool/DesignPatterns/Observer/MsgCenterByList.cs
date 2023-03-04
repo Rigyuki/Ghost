@@ -11,6 +11,10 @@ namespace Scripts.CustomTool.DesignPatterns.ObserverPattern {
         public const int COLLECTION_LU = 1;
         public const int COLLECTION_GHOST = 2;
 
+        public const int ENEMY_AI_ATTACK = 3;
+        public const int ENEMY_AI_CHASE = 4;
+        public const int ENEMY_AI_PATROL = 5;
+
         public static bool Enabled = true;
         private static List<System.Action<CommonMsg>> _actions = new List<Action<CommonMsg>>(1024);
 

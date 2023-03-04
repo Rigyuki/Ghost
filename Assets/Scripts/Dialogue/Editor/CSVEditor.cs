@@ -15,6 +15,7 @@ public class CSVEditor : Editor
         if (GUILayout.Button("读取文件"))
         {
             dialogueData.dialogues = dialogueData.GetDialogue(dialogueData.filename).ToArray();
+            Debug.Log("filename:"+dialogueData.filename.ToString());
         }
     }
 }

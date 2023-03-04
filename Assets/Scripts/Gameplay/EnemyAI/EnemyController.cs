@@ -1,0 +1,137 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using Scripts.Utils;
+using Scripts.Gameplay.Basic;
+using Spine.Unity;
+using UnityEngine.UIElements.Experimental;
+using UnityEngine.EventSystems;
+using Scripts.CustomTool.DesignPatterns.ObserverPattern;
+using Scripts.Gameplay.GhostBook;
+
+public class EnemyController : MonoBehaviour
+{
+    
+    [SerializeField] AnimationPlayer ani;
+    [SerializeField] AnimationPlayer aniAttack;
+    [SerializeField] AnimationPlayer aniAttackEffect;
+   
+    public string enemy_idle_base = "sheyao_stand";
+    public string enemy_patrol_base="sheyao_walk";
+    public string enemy_chase_base = "sheyao2_walk";
+    public string enemy_attack_base = "sheyao2_attack";
+    public string enemy_effect1_base = "1";
+    public string enemy_effect2_base = "2";
+    public string enemy_effect3_base = "3";
+
+    int facing = 1;//1=Ç°£¬2=ºó;4=×ó£¬8=ÓÒ
+ 
+    bool chasing;
+
+
+    private float originValuelr;
+
+    [SerializeField]Transform player;
+
+
+    public Transform cubeRed;//player
+    public Transform cubeBlue;//myself
+
+    private void Start()
+    {
+        originValuelr = transform.position.x;
+
+    }
+
+    private void OnEnable()
+    {
+        MsgCenterByList.AddListener(OnMsg);
+    }
+
+    private void OnDisable()
+    {
+
+    }
+
+    private void OnMsg(CommonMsg obj)
+    {
+        if (obj.MsgId == MsgCenterByList.ENEMY_AI_ATTACK) EnemyAttack();
+        if (obj.MsgId == MsgCenterByList.ENEMY_AI_CHASE) EnemyChasing();
+        if (obj.MsgId == MsgCenterByList.ENEMY_AI_PATROL) EnemyPatrol();
+    }
+
+    private void Update()
+    {
+        judgeFacing();
+        //SetEnemyAnimation();        
+    }
+
+    private void EnemyAttack()
+    {
+        Debug.Log("attacking");
+        aniAttack.gameObject.SetActive(true);
+        aniAttack.Play(0, enemy_attack_base, facing, true);
+        ani.gameObject.SetActive(false);
+        // TODO: attact effect
+    }
+
+    private void EnemyChasing()
+    {
+        Debug.Log("chasing");
+        aniAttack.gameObject.SetActive(true);
+        aniAttack.Play(0, enemy_chase_base, facing, true);
+        ani.gameObject.SetActive(false);
+    }
+
+    private void EnemyPatrol()
+    {
+        Debug.Log("patrol");
+        ani.Play(0, enemy_patrol_base, facing, true);
+        aniAttack.gameObject.SetActive(false);
+        ani.gameObject.SetActive(true);
+    }
+
+    private void judgeFacing()
+    {        
+        Vector3 relativePosition = cubeRed.position - cubeBlue.position;
+        Vector3 cubeForward = cubeBlue.forward;
+
+        float result = Vector3.Dot(cubeForward, relativePosition);
+        float angle = Vector3.Angle(cubeForward, relativePosition);    
+
+        if ( originValuelr - transform.position.x == 0)
+        {
+            chasing = false;
+        }
+        else
+        {
+            chasing = true;
+            if (angle < 90 )
+            {
+                if(originValuelr - transform.position.x > 0)
+                {
+                    facing = 6;
+                }                   
+                if (originValuelr - transform.position.x < 0)
+                {
+                    facing = 5;
+                }
+                   
+            }else if (angle > 90)
+            {
+                if (originValuelr - transform.position.x > 0)
+                {
+                    facing = 6;
+                }
+                if (originValuelr - transform.position.x < 0)
+                {
+                    facing = 10;
+                }
+                   
+            }
+           
+        }
+        originValuelr = transform.position.x;
+    }
+
+}
