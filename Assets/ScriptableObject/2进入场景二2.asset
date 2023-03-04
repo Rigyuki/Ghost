@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 684451088bde5a14abae86b42c81c2db, type: 3}
+  m_Name: "2\u8FDB\u5165\u573A\u666F\u4E8C2"
+  m_EditorClassIdentifier: 
+  dialogues:
+  - title: '  '
+    dialogue: "<b>\u51E0\u767E\u5E74\uFF0C\u4E0A\u5343\u5E74\uFF0C\u60F6\u60F6\u4E0D\u53EF\u7EC8\u65E5\u2026\u2026"
+    onLeftSide: 0
+    portrait: {fileID: 21300000, guid: faffdd3f507cdeb4d98fa2754e56f761, type: 3}
+  - title: '  '
+    dialogue: "\u88AB\u5077\u4E86\uFF0C\u88AB\u5403\u4E86\uFF0C\u5979\u6210\u4E86\u4EBA\uFF0C\u6211\u8FD8\u662F\u755C\u751F\u2026\u2026"
+    onLeftSide: 0
+    portrait: {fileID: 21300000, guid: faffdd3f507cdeb4d98fa2754e56f761, type: 3}
+  - title: ' '
+    dialogue: "\u88AB\u5077\u4E86\uFF0C\u88AB\u5403\u4E86\uFF0C\u5475\u5475\u2026\u2026\u88AB\u5077\u4E86\uFF0C\u88AB\u5403\u4E86\u2026\u2026"
+    onLeftSide: 0
+    portrait: {fileID: 21300000, guid: faffdd3f507cdeb4d98fa2754e56f761, type: 3}
+  filename: "2\u8FDB\u5165\u573A\u666F\u4E8C2.csv"
