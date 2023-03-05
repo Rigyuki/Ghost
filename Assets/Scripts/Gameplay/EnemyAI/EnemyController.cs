@@ -28,6 +28,8 @@ public class EnemyController : MonoBehaviour
  
     bool chasing;
 
+    float prevAttackTime;
+
 
     private float originValuelr;
 
@@ -36,6 +38,8 @@ public class EnemyController : MonoBehaviour
 
     public Transform cubeRed;//player
     public Transform cubeBlue;//myself
+
+    [SerializeField] GameObject projectilePref;
 
     private void Start()
     {
@@ -68,11 +72,17 @@ public class EnemyController : MonoBehaviour
 
     private void EnemyAttack()
     {
+        if (Time.time - prevAttackTime < 0.5f)
+            return;
+        prevAttackTime = Time.time;
         Debug.Log("attacking");
         aniAttack.gameObject.SetActive(true);
         aniAttack.Play(0, enemy_attack_base, facing, true);
         ani.gameObject.SetActive(false);
         // TODO: attact effect
+        GameObject projectile = Instantiate(projectilePref);
+        projectile.transform.position = transform.TransformPoint(Vector3.zero);
+        projectile.GetComponent<ProjectileController>().Prepare(player.position + Vector3.down * 0.5f);
     }
 
     private void EnemyChasing()

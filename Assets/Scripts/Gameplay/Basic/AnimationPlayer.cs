@@ -8,7 +8,7 @@ namespace Scripts.Gameplay.Basic
     [RequireComponent(typeof(SkeletonAnimation))]
     public class AnimationPlayer : MonoBehaviour
     {
-        SkeletonAnimation sa;
+        [HideInInspector]public SkeletonAnimation sa;
         bool dontInterrupt;
         private void Awake()
         {
@@ -33,19 +33,29 @@ namespace Scripts.Gameplay.Basic
             }
             return baseName;
         }
-        public void Play(int track, string nameBase, int facing, bool loop, bool dontInterrupt = false)
+        public void Play(int track,string name,bool loop,bool dontInterrupt)
         {
+            if(sa.state.GetCurrent(track)==null)
+            {
+                sa.Skeleton.SetToSetupPose();
+                sa.AnimationState.ClearTracks();
+                sa.state.SetAnimation(track, name, loop);
+                return;
+            }
             if (dontInterrupt)
                 this.dontInterrupt = false;
             if (this.dontInterrupt && !sa.state.GetCurrent(0).IsComplete)
                 return;
             this.dontInterrupt = dontInterrupt;
-            string animName = AddSuffix(nameBase, facing);
-            if (sa.state.GetCurrent(track).Animation.Name == animName)
+            if (sa.state.GetCurrent(track).Animation.Name == name)
                 return;
             sa.Skeleton.SetToSetupPose();
             sa.AnimationState.ClearTracks();
-            sa.state.SetAnimation(track, animName, loop);
+            sa.state.SetAnimation(track, name, loop);
+        }
+        public void Play(int track, string nameBase, int facing, bool loop, bool dontInterrupt = false)
+        {
+            Play(track, AddSuffix(nameBase, facing), loop, dontInterrupt);
         }
     }
 }
