@@ -15,6 +15,10 @@ namespace Scripts.CustomTool.DesignPatterns.ObserverPattern {
         public const int ENEMY_AI_CHASE = 4;
         public const int ENEMY_AI_PATROL = 5;
 
+        public const int SAFE_DOOR_OPEN = 6;
+
+        public const int ENDING = 7;
+
         public static bool Enabled = true;
         private static List<System.Action<CommonMsg>> _actions = new List<Action<CommonMsg>>(1024);
 

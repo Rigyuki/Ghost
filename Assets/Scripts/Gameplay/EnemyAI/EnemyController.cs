@@ -8,6 +8,8 @@ using UnityEngine.UIElements.Experimental;
 using UnityEngine.EventSystems;
 using Scripts.CustomTool.DesignPatterns.ObserverPattern;
 using Scripts.Gameplay.GhostBook;
+using Scripts.Gameplay.Achievement;
+using System;
 
 public class EnemyController : MonoBehaviour
 {
@@ -41,10 +43,14 @@ public class EnemyController : MonoBehaviour
 
     [SerializeField] GameObject projectilePref;
 
+    [SerializeField] GameObject AchievementCon;
+
+     
     private void Start()
     {
         originValuelr = transform.position.x;
 
+        
     }
 
     private void OnEnable()
@@ -83,6 +89,7 @@ public class EnemyController : MonoBehaviour
         GameObject projectile = Instantiate(projectilePref);
         projectile.transform.position = transform.TransformPoint(Vector3.zero);
         projectile.GetComponent<ProjectileController>().Prepare(player.position + Vector3.down * 0.5f);
+
     }
 
     private void EnemyChasing()
@@ -91,6 +98,9 @@ public class EnemyController : MonoBehaviour
         aniAttack.gameObject.SetActive(true);
         aniAttack.Play(0, enemy_chase_base, facing, true);
         ani.gameObject.SetActive(false);
+
+        GameObject achieve = Instantiate(AchievementCon);
+        achieve.GetComponent<AchievementController>().SendMessage("judgeRoad");
     }
 
     private void EnemyPatrol()
