@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5476742821117142532
 Transform:
   m_ObjectHideFlags: 0
@@ -539,7 +539,8 @@ MonoBehaviour:
   player: {fileID: 0}
   cubeRed: {fileID: 0}
   cubeBlue: {fileID: 5476742821574254047}
-  projectilePref: {fileID: 5476742821117142535}
+  projectilePref: {fileID: 2295230544459750506, guid: 8ed78ce159ff1a44a9671d10575c4e1b,
+    type: 3}
   AchievementCon: {fileID: 0}
 --- !u!114 &5476742821574254040
 MonoBehaviour:
@@ -553,8 +554,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 347205df9da40564e8944ac7f30b037c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  naveMeshSurfaces:
-  - {fileID: 0}
   target: {fileID: 0}
   updatePerXFrames: 10
   patrolSpeed: 3

@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ba8cf77b98576449f70644fc8fadb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  follower: {fileID: 0}
+  isYellowButterfly: 0
   speed: 2.2
   slowSpeed: 1
   positions:
@@ -179,7 +179,7 @@ MonoBehaviour:
   - {x: -1.2993478, y: 1, z: -0.5290277}
   - {x: 9.506822, y: 1, z: -6.079444}
   - {x: 9.405171, y: 1, z: -0.53756046}
-  maxDistance: 8
+  maxDistance: 1
 --- !u!135 &5201271374330731637
 SphereCollider:
   m_ObjectHideFlags: 0

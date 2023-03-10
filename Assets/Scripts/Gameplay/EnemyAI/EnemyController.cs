@@ -78,7 +78,7 @@ public class EnemyController : MonoBehaviour
 
     private void EnemyAttack()
     {
-        if (Time.time - prevAttackTime < 0.5f)
+        if (Time.time - prevAttackTime < 1.5f)
             return;
         prevAttackTime = Time.time;
         Debug.Log("attacking");
@@ -98,9 +98,10 @@ public class EnemyController : MonoBehaviour
         aniAttack.gameObject.SetActive(true);
         aniAttack.Play(0, enemy_chase_base, facing, true);
         ani.gameObject.SetActive(false);
-
-        GameObject achieve = Instantiate(AchievementCon);
-        achieve.GetComponent<AchievementController>().SendMessage("judgeRoad");
+        // 不赋值会报错，先注释掉了
+        // TODO: 结局管理
+        //GameObject achieve = Instantiate(AchievementCon);
+        //achieve.GetComponent<AchievementController>().SendMessage("judgeRoad");
     }
 
     private void EnemyPatrol()

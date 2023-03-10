@@ -5,30 +5,32 @@ using UnityEngine;
 using DG;
 using DG.Tweening;
 
-public class DoorOpen : MonoBehaviour
+namespace Scripts.Gameplay.Door
 {
-    [SerializeField] private Transform doorLeft;
-    [SerializeField] private Transform doorRight;
-    
-    private void OnEnable()
+    public class DoorOpen : MonoBehaviour
     {
-        MsgCenterByList.AddListener(OnMsg);
-    }
+        [SerializeField] private Transform doorLeft;
+        [SerializeField] private Transform doorRight;
 
-    private void OnDisable()
-    {
-        MsgCenterByList.RemoveListener(OnMsg);
-    }
-
-    //如果要引用这个请参照 luActive.cs
-    private void OnMsg(CommonMsg obj)
-    {
-        if (obj.MsgId == MsgCenterByList.SAFE_DOOR_OPEN)
+        private void OnEnable()
         {
-            doorLeft.DORotate(new Vector3(0, 80f, 0), 3f, RotateMode.WorldAxisAdd);
-            doorRight.DORotate(new Vector3(0, -80f, 0), 3f, RotateMode.WorldAxisAdd);
+            MsgCenterByList.AddListener(OnMsg);
         }
-            
+
+        private void OnDisable()
+        {
+            MsgCenterByList.RemoveListener(OnMsg);
+        }
+
+        //如果要引用这个请参照 luActive.cs
+        private void OnMsg(CommonMsg obj)
+        {
+            if (obj.MsgId == MsgCenterByList.SAFE_DOOR_OPEN)
+            {
+                doorLeft.DORotate(new Vector3(0, 80f, 0), 3f, RotateMode.WorldAxisAdd);
+                doorRight.DORotate(new Vector3(0, -80f, 0), 3f, RotateMode.WorldAxisAdd);
+            }
+            this.enabled = false;
+        }
     }
 }
-

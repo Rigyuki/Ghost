@@ -24,15 +24,19 @@ namespace Scripts.Gameplay.Lantern
         private void OnTriggerEnter(Collider other)
         {
             LanternSwitchSubject.Instance.Notify(relatedLantern);
-            if (CheckUnlock())
-            {
-                LanternUnlockSubject.Instance.Notify(null);
-            }
         }
-        bool CheckUnlock()
+        void Disappear(object arg)
         {
-            //TODO: µ„µ∆Ω‚À¯≈–∂®
-            return false;
+            foreach (var c in GetComponents<Collider>())
+                c.enabled = false;
+        }
+        private void OnEnable()
+        {
+            LanternUnlockSubject.Instance.Register(Disappear);
+        }
+        private void OnDisable()
+        {
+            LanternUnlockSubject.Instance.Unregister(Disappear);
         }
     }
 }

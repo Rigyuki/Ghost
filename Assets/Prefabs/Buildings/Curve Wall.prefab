@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8335710875675312970}
   - component: {fileID: 2388564603804186550}
   - component: {fileID: 4715842888130081771}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Curve Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.22155708}
-  m_Center: {x: 0, y: 0, z: 0.001810357}
+  m_Center: {x: -1.0144245e-18, y: 0, z: 0.001810357}
 --- !u!208 &4715842888130081771
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -190,22 +190,22 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: da237e21c14677348845c39f372221ef,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2665365163998792647, guid: da237e21c14677348845c39f372221ef,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6573222878854135344, guid: da237e21c14677348845c39f372221ef,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7814410237252134780, guid: da237e21c14677348845c39f372221ef,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da237e21c14677348845c39f372221ef, type: 3}

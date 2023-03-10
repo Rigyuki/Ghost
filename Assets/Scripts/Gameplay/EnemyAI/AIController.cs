@@ -10,7 +10,6 @@ using Scripts.CustomTool.DesignPatterns.ObserverPattern;
 
 public class AIController : MonoBehaviour
 {
-    public List<NavMeshSurface> naveMeshSurfaces = new List<NavMeshSurface>();
     public Transform target;
 
     [Range(1, 10)] public int updatePerXFrames = 5;
@@ -44,11 +43,6 @@ public class AIController : MonoBehaviour
             return;
         }
         temp = 1;
-        //foreach (NavMeshSurface surface in naveMeshSurfaces)
-        //{
-        //    surface.BuildNavMesh();
-        //}
- 
 
         float dis = Vector3.Distance(target.transform.position, transform.position);
         if (dis < agent.stoppingDistance)

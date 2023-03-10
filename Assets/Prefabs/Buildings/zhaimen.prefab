@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 866937573013457573}
   - component: {fileID: 7674287557226079103}
   - component: {fileID: 418157589338720194}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: zhaimending_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 6444285061866341835}
   - component: {fileID: 6149201348360963969}
   - component: {fileID: 6798989640308632290}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: zhaimenqiang_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 7645719587479027796}
   - component: {fileID: 8060531951131640818}
   - component: {fileID: 4436950643057546068}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: zhaimen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 1385005586283831515}
   - component: {fileID: 7158173436229861466}
   - component: {fileID: 3097845535983001729}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: zhaimenmen_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 7749577537369238704}
   - component: {fileID: 3376886366745503888}
   - component: {fileID: 2198499725106968557}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: zhaimenmen_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

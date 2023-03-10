@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using Scripts.CustomTool.DesignPatterns.ObserverPattern;
 
 namespace Scripts.Gameplay.EightTrigrams
 {
@@ -13,8 +14,11 @@ namespace Scripts.Gameplay.EightTrigrams
     public class TrigramManager : MonoBehaviour
     {
         public Transform outermost;
+        public float outerOffset;
         public Transform middle;
+        public float middleOffset;
         public Transform innermost;
+        public float innerOffset;
         public float speed;
 
         private void OnEnable()
@@ -25,9 +29,12 @@ namespace Scripts.Gameplay.EightTrigrams
         {
             TrigramRotateSubject.Instance.Unregister(Rotate);
         }
-
+        bool rotating;
         private IEnumerator Rotate(Transform transform, Vector3 axis, float angle)
         {
+            if (rotating)
+                yield break;
+            rotating = true;
             while (angle > 0)
             {
                 float rotate = speed * Time.deltaTime;
@@ -43,9 +50,14 @@ namespace Scripts.Gameplay.EightTrigrams
                 transform.Rotate(axis, rotate);
                 yield return null;
             }
-            if(CheckUnlock())
+            rotating = false;
+            if (CheckUnlock())
             {
                 TrigramUnlockSubject.Instance.Notify(null);
+                MsgCenterByList.SendMessage(new CommonMsg()
+                {
+                    MsgId = MsgCenterByList.SAFE_DOOR_OPEN
+                });
             }
         }
         void RotateOuter() => StartCoroutine(Rotate(outermost, Vector3.up, 45));
@@ -68,8 +80,10 @@ namespace Scripts.Gameplay.EightTrigrams
         }
         bool CheckUnlock()
         {
-            //TODO: ∞Àÿ‘’ÛΩ‚À¯≈–∂®
-            return false;
+            int o = (Mathf.RoundToInt(outermost.localEulerAngles.y + outerOffset) % 360 + 360) % 360;
+            int m = (Mathf.RoundToInt(middle.localEulerAngles.y + middleOffset) % 360 + 360) % 360;
+            int i = (Mathf.RoundToInt(innermost.localEulerAngles.y + innerOffset) % 360 + 360) % 360;
+            return o == m && m == i;
         }
     }
 }

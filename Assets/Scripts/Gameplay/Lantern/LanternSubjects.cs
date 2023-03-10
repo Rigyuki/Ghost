@@ -1,4 +1,5 @@
 ﻿using Scripts.CustomTool.DesignPatterns;
+using Scripts.CustomTool.DesignPatterns.ObserverPattern;
 
 namespace Scripts.Gameplay.Lantern
 {
@@ -10,7 +11,13 @@ namespace Scripts.Gameplay.Lantern
             allLanternOn = true;
             base.Notify(arg);
             if (allLanternOn)
+            {
                 LanternUnlockSubject.Instance.Notify(null);
+                MsgCenterByList.SendMessage(new CommonMsg
+                {
+                    MsgId = MsgCenterByList.SAFE_DOOR_OPEN
+                });
+            }
         }
     }
     public class LanternUnlockSubject : SubjectSingleton<LanternUnlockSubject>

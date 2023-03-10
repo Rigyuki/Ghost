@@ -19,6 +19,8 @@ public class DialogueManager : MonoBehaviour
     [HideInInspector]
     public int pointer;
 
+    public bool dialogueOngoing => gameObject.activeSelf;
+
     private void Start()
     {
         instance = this;

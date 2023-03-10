@@ -210,7 +210,7 @@ namespace Scripts.Gameplay.Basic
             ChangeFacing(axis);
             CheckPlatform();
             Dash();
-            if (!frozen)
+            if (!frozen&&!DialogueManager.instance.dialogueOngoing)
             {
                 PickOrPut();
                 if (!dashing)
