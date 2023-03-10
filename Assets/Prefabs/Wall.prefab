@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: de2494dafd782814e9b4398726d741c4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -94,7 +94,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4407276488353070527}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 19d48a54f7f3378468dcc1bd52f903a4, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2

@@ -7,7 +7,7 @@ namespace Scripts.Gameplay.Chase
     public class Butterfly : MonoBehaviour
     {
         public bool isYellowButterfly;
-        public Transform follower;
+        Transform follower;
         public float speed;
         public float slowSpeed;
         public List<Vector3> positions = new List<Vector3>();
@@ -45,6 +45,7 @@ namespace Scripts.Gameplay.Chase
             if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
             {
                 started = true;
+                follower = other.transform;
             }
             if (isYellowButterfly)
                 ++Basic.PlayerController.redButterfly;
