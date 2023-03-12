@@ -11479,15 +11479,35 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2356951505467929683, guid: 9211f244ac2dbfa4cb9e8a5e8e4833d9,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 2940262122875043713, guid: 9211f244ac2dbfa4cb9e8a5e8e4833d9,
         type: 3}
       propertyPath: m_Name
       value: "\u5EFA\u7B51"
       objectReference: {fileID: 0}
+    - target: {fileID: 3261676112059022707, guid: 9211f244ac2dbfa4cb9e8a5e8e4833d9,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3542931212427318353, guid: 9211f244ac2dbfa4cb9e8a5e8e4833d9,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8536396515967687443, guid: 9211f244ac2dbfa4cb9e8a5e8e4833d9,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8709573298918964607, guid: 9211f244ac2dbfa4cb9e8a5e8e4833d9,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 9205319344501279772, guid: 9211f244ac2dbfa4cb9e8a5e8e4833d9,
         type: 3}
