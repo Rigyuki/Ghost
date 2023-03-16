@@ -7,7 +7,7 @@ namespace Scripts.CustomTool.EditorTools
 {
     public class MoveByOneUnit
     {
-        [MenuItem("CustomTool/MoveLeftByOneUnit #&%a")]
+        [MenuItem("CustomTool/MoveByOneUnit/MoveLeftByOneUnit #&%a")]
         public static void MoveLeftMenuItem()
         {
             var objects = Selection.GetTransforms(SelectionMode.TopLevel);
@@ -17,7 +17,7 @@ namespace Scripts.CustomTool.EditorTools
                 t.transform.AddLocalPositionX(-1);
             }
         }
-        [MenuItem("CustomTool/MoveRightByOneUnit #&%d")]
+        [MenuItem("CustomTool/MoveByOneUnit/MoveRightByOneUnit #&%d")]
         public static void MoveRightMenuItem()
         {
             var objects = Selection.GetTransforms(SelectionMode.TopLevel);
@@ -27,7 +27,7 @@ namespace Scripts.CustomTool.EditorTools
                 t.transform.AddLocalPositionX(1);
             }
         }
-        [MenuItem("CustomTool/MoveForwardByOneUnit #&%w")]
+        [MenuItem("CustomTool/MoveByOneUnit/MoveForwardByOneUnit #&%w")]
         public static void MoveForwardMenuItem()
         {
             var objects = Selection.GetTransforms(SelectionMode.TopLevel);
@@ -37,7 +37,7 @@ namespace Scripts.CustomTool.EditorTools
                 t.transform.AddLocalPositionZ(1);
             }
         }
-        [MenuItem("CustomTool/MoveBackwardByOneUnit #&%s")]
+        [MenuItem("CustomTool/MoveByOneUnit/MoveBackwardByOneUnit #&%s")]
         public static void MoveBackwardMenuItem()
         {
             var objects = Selection.GetTransforms(SelectionMode.TopLevel);
@@ -47,7 +47,7 @@ namespace Scripts.CustomTool.EditorTools
                 t.transform.AddLocalPositionZ(-1);
             }
         }
-        [MenuItem("CustomTool/MoveUpByOneUnit #&%q")]
+        [MenuItem("CustomTool/MoveByOneUnit/MoveUpByOneUnit #&%q")]
         public static void MoveUpMenuItem()
         {
             var objects = Selection.GetTransforms(SelectionMode.TopLevel);
@@ -57,7 +57,7 @@ namespace Scripts.CustomTool.EditorTools
                 t.transform.AddLocalPositionY(-1);
             }
         }
-        [MenuItem("CustomTool/MoveDownByOneUnit #&%e")]
+        [MenuItem("CustomTool/MoveByOneUnit/MoveDownByOneUnit #&%e")]
         public static void MoveDownMenuItem()
         {
             var objects = Selection.GetTransforms(SelectionMode.TopLevel);

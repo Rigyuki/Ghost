@@ -127,7 +127,7 @@ namespace Scripts.Gameplay.Basic
             else
             {
                 Physics.Raycast(ray, out hit);
-                if (hit.collider.gameObject.CompareTag(movableTag))
+                if (hit.collider && hit.collider.gameObject.CompareTag(movableTag))
                 {
                     targetObject = hit.collider.gameObject;
                 }

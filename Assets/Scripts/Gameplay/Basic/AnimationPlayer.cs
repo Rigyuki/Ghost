@@ -37,8 +37,8 @@ namespace Scripts.Gameplay.Basic
         {
             if(sa.state.GetCurrent(track)==null)
             {
-                sa.Skeleton.SetToSetupPose();
-                sa.AnimationState.ClearTracks();
+                //sa.Skeleton.SetToSetupPose();
+                //sa.AnimationState.ClearTracks();
                 sa.state.SetAnimation(track, name, loop);
                 return;
             }
@@ -49,8 +49,8 @@ namespace Scripts.Gameplay.Basic
             this.dontInterrupt = dontInterrupt;
             if (sa.state.GetCurrent(track).Animation.Name == name)
                 return;
-            sa.Skeleton.SetToSetupPose();
-            sa.AnimationState.ClearTracks();
+            //sa.Skeleton.SetToSetupPose();
+            //sa.AnimationState.ClearTracks();
             sa.state.SetAnimation(track, name, loop);
         }
         public void Play(int track, string nameBase, int facing, bool loop, bool dontInterrupt = false)

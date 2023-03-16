@@ -29,8 +29,8 @@ namespace Scripts.Gameplay.Door
             {
                 doorLeft.DORotate(new Vector3(0, 80f, 0), 3f, RotateMode.WorldAxisAdd);
                 doorRight.DORotate(new Vector3(0, -80f, 0), 3f, RotateMode.WorldAxisAdd);
+                this.enabled = false;
             }
-            this.enabled = false;
         }
     }
 }
