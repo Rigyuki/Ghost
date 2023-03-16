@@ -19,6 +19,7 @@ namespace Scripts.CustomTool.DesignPatterns.ObserverPattern {
 
         public const int ENDING = 7;
 
+
         public static bool Enabled = true;
         private static List<System.Action<CommonMsg>> _actions = new List<Action<CommonMsg>>(1024);
 

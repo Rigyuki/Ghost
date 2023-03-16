@@ -49,6 +49,7 @@ namespace Scripts.Gameplay.Basic
             this.dontInterrupt = dontInterrupt;
             if (sa.state.GetCurrent(track).Animation.Name == name)
                 return;
+
             //sa.Skeleton.SetToSetupPose();
             //sa.AnimationState.ClearTracks();
             sa.state.SetAnimation(track, name, loop);
@@ -56,6 +57,7 @@ namespace Scripts.Gameplay.Basic
         public void Play(int track, string nameBase, int facing, bool loop, bool dontInterrupt = false)
         {
             Play(track, AddSuffix(nameBase, facing), loop, dontInterrupt);
+
         }
     }
 }

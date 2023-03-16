@@ -30,8 +30,11 @@ public class EnemyController : MonoBehaviour
  
     bool chasing;
 
+<<<<<<< HEAD
     float prevAttackTime;
 
+=======
+>>>>>>> yukiNew
 
     private float originValuelr;
 
@@ -41,16 +44,22 @@ public class EnemyController : MonoBehaviour
     public Transform cubeRed;//player
     public Transform cubeBlue;//myself
 
+<<<<<<< HEAD
     [SerializeField] GameObject projectilePref;
 
     [SerializeField] GameObject AchievementCon;
 
      
+=======
+>>>>>>> yukiNew
     private void Start()
     {
         originValuelr = transform.position.x;
 
+<<<<<<< HEAD
         
+=======
+>>>>>>> yukiNew
     }
 
     private void OnEnable()
@@ -78,18 +87,24 @@ public class EnemyController : MonoBehaviour
 
     private void EnemyAttack()
     {
+<<<<<<< HEAD
         if (Time.time - prevAttackTime < 1.5f)
             return;
         prevAttackTime = Time.time;
+=======
+>>>>>>> yukiNew
         Debug.Log("attacking");
         aniAttack.gameObject.SetActive(true);
         aniAttack.Play(0, enemy_attack_base, facing, true);
         ani.gameObject.SetActive(false);
         // TODO: attact effect
+<<<<<<< HEAD
         GameObject projectile = Instantiate(projectilePref);
         projectile.transform.position = transform.TransformPoint(Vector3.zero);
         projectile.GetComponent<ProjectileController>().Prepare(player.position + Vector3.down * 0.5f);
 
+=======
+>>>>>>> yukiNew
     }
 
     private void EnemyChasing()
@@ -98,10 +113,13 @@ public class EnemyController : MonoBehaviour
         aniAttack.gameObject.SetActive(true);
         aniAttack.Play(0, enemy_chase_base, facing, true);
         ani.gameObject.SetActive(false);
+<<<<<<< HEAD
         // 不赋值会报错，先注释掉了
         // TODO: 结局管理
         //GameObject achieve = Instantiate(AchievementCon);
         //achieve.GetComponent<AchievementController>().SendMessage("judgeRoad");
+=======
+>>>>>>> yukiNew
     }
 
     private void EnemyPatrol()

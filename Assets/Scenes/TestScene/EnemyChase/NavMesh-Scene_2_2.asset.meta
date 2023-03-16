@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/MainScene/NavMesh-NavmeshManager.asset.meta
+guid: ba8d4a5c1d05857478048c21feeafe58
+========
+guid: e5f7f6196f20879458537f8acf95e1d3
+>>>>>>>> yukiNew:Assets/Scenes/TestScene/EnemyChase/NavMesh-Scene_2_2.asset.meta
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 23800000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

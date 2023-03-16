@@ -3,6 +3,7 @@ using Scripts.Utils;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 using UnityGameFramework.Runtime;
 
 namespace Scripts.Gameplay.Basic
@@ -11,7 +12,7 @@ namespace Scripts.Gameplay.Basic
     public class PlayerController : CharacterBase
     {
         public static int redButterfly = 0;
-
+        public Axis AxisTest;
         CharacterController controller;
 
         bool hit;
@@ -22,7 +23,16 @@ namespace Scripts.Gameplay.Basic
         public float speed = 2;
         public float speedFallout = 20;
         public float jumpSpeed = 10;
-        public Vector3 Axis => (Input.GetAxis("Vertical") * transform.right - Input.GetAxis("Horizontal") * transform.forward).normalized;
+
+        //todo:移动入口
+         public Vector3 Axis => transform.rotation==new Quaternion(0,-1,0,0)
+             ? (Input.GetAxis("Vertical")*(-1) * transform.right - Input.GetAxis("Horizontal") * (-1) * transform.forward).normalized
+            : (Input.GetAxis("Vertical") * transform.right - Input.GetAxis("Horizontal") * transform.forward).normalized;
+        
+        
+        //public Vector3 Axis => (Input.GetAxis("Vertical") * transform.right - Input.GetAxis("Horizontal") * transform.forward).normalized;
+
+       
         public bool JumpPressed => Input.GetKey(KeyCode.Space);
         Vector3 horizontalVelocity = Vector3.zero;
         Vector3 currentVelocity = Vector3.zero;
@@ -187,6 +197,7 @@ namespace Scripts.Gameplay.Basic
         void CheckPlatform()
         {
             RaycastHit hit;
+            //todo:跳跃鉴定
             Ray ray = new Ray(transform.position + controller.center, Vector3.down);
             grounded = Physics.Raycast(ray, out hit, groundTestDistance, groundLayers);
 
@@ -206,6 +217,7 @@ namespace Scripts.Gameplay.Basic
         {
             targetVelocity = Vector3.zero;
             var axis = Axis;
+            
             walking = axis.magnitude != 0;
             ChangeFacing(axis);
             CheckPlatform();
