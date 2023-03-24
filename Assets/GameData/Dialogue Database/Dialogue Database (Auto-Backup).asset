@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 935899b62f48ae5498594680ed17d133, type: 3}
-  m_Name: Dialogue Database
+  m_Name: Dialogue Database (Auto-Backup)
   m_EditorClassIdentifier: 
   version: 
   author: 
@@ -82,7 +82,7 @@ MonoBehaviour:
   - id: 3
     fields:
     - title: Name
-      value: ???
+      value: "\uFF1F\uFF1F\uFF1F"
       type: 0
       typeString: 
     - title: Pictures
@@ -171,7 +171,7 @@ MonoBehaviour:
       type: 1
       typeString: CustomFieldType_Number
     - title: Entry 1 State
-      value: active
+      value: unassigned
       type: 0
       typeString: 
     - title: Entry 1
@@ -673,9 +673,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Camera(Defualt UP,actor:???,1);
-
-          {{default}}'
+        value: 
         type: 0
         typeString: 
       conversationID: 1
@@ -690,6 +688,12 @@ MonoBehaviour:
         originDialogueID: 7
         destinationConversationID: 1
         destinationDialogueID: 8
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 7
+        destinationConversationID: 1
+        destinationDialogueID: 9
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -726,7 +730,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\u53EA\u89C1\u6811\u540E\u85CF\u4E86\u4E00\u4E2A\u5DF2\u7ECF\u5931\u53BB\u751F\u547D\u7684\u7EB8\u7247\u4EBA\uFF0C\u8BF7\u4F7F\u7528\u6CD5\u672F\u590D\u6D3B\u5B83"
+        value: "\u8BF7\u4F7F\u7528\u3010\u8FD8\u9B42\u3011\u590D\u6D3B\u5B83"
         type: 0
         typeString: 
       - title: Sequence
@@ -740,13 +744,7 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 8
-        destinationConversationID: 1
-        destinationDialogueID: 10
-        isConnector: 0
-        priority: 2
+      outgoingLinks: []
       conditionsString: 
       userScript: 
       onExecute:
@@ -766,8 +764,8 @@ MonoBehaviour:
             m_CallState: 2
       canvasRect:
         serializedVersion: 2
-        x: 306.92377
-        y: 466.02063
+        x: 232.75156
+        y: 486.55048
         width: 160
         height: 30
     - id: 9
@@ -781,11 +779,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 4
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 3
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -815,68 +813,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 314.6354
-        y: 593.6371
-        width: 160
-        height: 30
-    - id: 10
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 4
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: "\u3010\u590D\u6D3B\u7EB8\u7247\u4EBA\u3011"
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 10
-        destinationConversationID: 1
-        destinationDialogueID: 9
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 308.0946
-        y: 527.2826
+        x: 449.31223
+        y: 485.2766
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 58.95266, y: 363.33942}
-    canvasZoom: 1.6599996
+    canvasScrollPosition: {x: 118.067986, y: 266.52512}
+    canvasZoom: 1.5699997
   - id: 2
     fields:
     - title: Title
