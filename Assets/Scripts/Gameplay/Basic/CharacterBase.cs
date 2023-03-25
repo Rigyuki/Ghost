@@ -35,5 +35,15 @@ namespace Scripts.Gameplay.Basic
             buffs.Remove(buff);
             buff.Finish();
         }
+        public virtual void TakeDamage(int damage)
+        {
+            _currentHP = Mathf.Max(_currentHP - damage, 0);
+            if (_currentHP <= 0)
+                Die();
+        }
+        public virtual void Die()
+        {
+            Debug.Log(name + " is dead.");
+        }
     }
 }

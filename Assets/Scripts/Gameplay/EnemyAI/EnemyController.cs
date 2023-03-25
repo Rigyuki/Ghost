@@ -63,7 +63,7 @@ public class EnemyController : MonoBehaviour
 
     private void OnDisable()
     {
-
+        MsgCenterByList.RemoveListener(OnMsg);
     }
 
     private void OnMsg(CommonMsg obj)

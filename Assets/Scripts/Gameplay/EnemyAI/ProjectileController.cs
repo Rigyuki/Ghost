@@ -62,7 +62,7 @@ public class ProjectileController : MonoBehaviour
     {
         if(collision.gameObject.layer==LayerMask.NameToLayer("Player"))
         {
-            ;
+            collision.gameObject.GetComponent<CharacterBase>().TakeDamage(10);
         }
         Hit();
     }
