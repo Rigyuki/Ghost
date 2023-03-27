@@ -86,21 +86,20 @@ public class EnemyController : MonoBehaviour
             return;
         prevAttackTime = Time.time;
 
-        Debug.Log("attacking");
+        //Debug.Log("attacking");
         aniAttack.gameObject.SetActive(true);
         aniAttack.Play(0, enemy_attack_base, facing, true);
         ani.gameObject.SetActive(false);
-        // TODO: attact effect
 
         GameObject projectile = Instantiate(projectilePref);
-        projectile.transform.position = transform.TransformPoint(Vector3.zero);
-        projectile.GetComponent<ProjectileController>().Prepare(player.position + Vector3.down * 0.5f);
+        projectile.transform.position = transform.TransformPoint(Vector3.up);
+        projectile.GetComponent<ProjectileController>().Prepare(player.position);
 
     }
 
     private void EnemyChasing()
     {
-        Debug.Log("chasing");
+        //Debug.Log("chasing");
         aniAttack.gameObject.SetActive(true);
         aniAttack.Play(0, enemy_chase_base, facing, true);
         ani.gameObject.SetActive(false);
@@ -114,7 +113,7 @@ public class EnemyController : MonoBehaviour
 
     private void EnemyPatrol()
     {
-        Debug.Log("patrol");
+        //Debug.Log("patrol");
         ani.Play(0, enemy_patrol_base, facing, true);
         aniAttack.gameObject.SetActive(false);
         ani.gameObject.SetActive(true);

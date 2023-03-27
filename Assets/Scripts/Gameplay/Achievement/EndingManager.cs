@@ -14,7 +14,7 @@ public class EndingManager : MonoBehaviour
 
     private void OnDisable()
     {
-
+        MsgCenterByList.RemoveListener(OnMsg);
     }
 
     private void OnMsg(CommonMsg obj)

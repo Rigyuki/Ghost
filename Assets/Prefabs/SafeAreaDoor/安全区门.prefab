@@ -726,6 +726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 6990667604254685395}
+  area: 0
 --- !u!1 &6069527679622616360
 GameObject:
   m_ObjectHideFlags: 0
