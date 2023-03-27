@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Scripts.Gameplay.Basic;
 
 namespace Scripts.Gameplay.EnemyAI
 {
@@ -10,6 +11,7 @@ namespace Scripts.Gameplay.EnemyAI
         {
             if (other.gameObject.layer != LayerMask.NameToLayer("Player"))
                 return;
+            other.gameObject.GetComponent<CharacterBase>().TakeDamage(10);
             Debug.Log("Hit");
         }
     }

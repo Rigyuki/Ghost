@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
 using UnityGameFramework.Runtime;
+using Scripts.UI;
+using UnityEngine.SceneManagement;
 
 namespace Scripts.Gameplay.Basic
 {
@@ -16,6 +18,7 @@ namespace Scripts.Gameplay.Basic
         CharacterController controller;
 
         bool hit;
+        bool dead;
 
 
 
@@ -155,6 +158,7 @@ namespace Scripts.Gameplay.Basic
         public string jump_base = "daoshi_jump";
         public string run_base = "daoshi_run";
         public string hit_base = "daoshi_shouji";
+        public string die_animation = "daoshi_die_135";
         void SetAnimation()
         {
             if (frozen)
@@ -251,6 +255,9 @@ namespace Scripts.Gameplay.Basic
 
             currentVelocity = new Vector3(horizontalVelocity.x, currentVelocity.y, horizontalVelocity.z);
 
+            if (dead)
+                return;
+
             if (!dashing)
             {
                 currentVelocity += Physics.gravity * Time.deltaTime;
@@ -272,6 +279,36 @@ namespace Scripts.Gameplay.Basic
             }
             SetAnimation();
             controller.Move(currentVelocity * Time.deltaTime);
+        }
+
+        private void LateUpdate()
+        {
+            if(transform.position.y<-10)
+            {
+                TakeDamage(10000);
+            }
+        }
+
+        public override void TakeDamage(int damage)
+        {
+            base.TakeDamage(damage);
+            HPChangeSubject.Instance.Notify(1f * currentHP / maxHP);
+            animationPlayer.Play(0, hit_base, facing, false, true);
+        }
+
+        public override void Die()
+        {
+            if (dead)
+                return;
+            dead = true;
+            base.Die();
+            animationPlayer.Play(0, die_animation, false, true);
+            StartCoroutine(RestartLevel(2));
+        }
+        IEnumerator RestartLevel(float waitTime)
+        {
+            yield return new WaitForSeconds(waitTime);
+            SceneManager.LoadScene(gameObject.scene.name);
         }
 
         private void OnDrawGizmosSelected()
