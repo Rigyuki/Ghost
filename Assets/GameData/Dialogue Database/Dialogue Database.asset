@@ -1591,13 +1591,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 515.217
-        y: 1117.8849
+        x: 513.9012
+        y: 1129.7269
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 46.459152, y: 581.12366}
-    canvasZoom: 0.6700001
+    canvasScrollPosition: {x: 53.973465, y: 653.6537}
+    canvasZoom: 0.76
   - id: 2
     fields:
     - title: Title

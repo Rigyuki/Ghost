@@ -13,6 +13,11 @@ public class DialogueTriggerArea : MonoBehaviour
         if (other.gameObject.layer != LayerMask.NameToLayer("Player")) return;
         DialogueManager.instance.Load(dialogueData);
         DialogueManager.instance.Next();
-        if (isDisposable) dialogueData = null;
+        if (isDisposable) 
+        {
+            dialogueData = null;
+            Destroy(this);
+        }
+        
     }
 }

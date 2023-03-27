@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 684451088bde5a14abae86b42c81c2db, type: 3}
+  m_Name: "1\u9999\u7389\u7EDB\u96EA"
+  m_EditorClassIdentifier: 
+  dialogues:
+  - title: "\u7EDB\u96EA"
+    dialogue: "\u753B\u4E2D\u4E16\u754C\u79BB\u5947\u8BE1\u8C32\uFF0C\u5996\u6C14\u4E5F\u88AB\u63A9\u57CB\u4E86\uFF0C\u6240\u4EE5\u5373\u4FBF\u9053\u957F\u662F\u4FEE\u4ED9\u4E4B\u4EBA\uFF0C\u4E5F\u65E0\u6CD5\u5206\u8FA8\u4EBA\u5996\u4E4B\u522B\u3002"
+    onLeftSide: 1
+    portrait: {fileID: 21300000, guid: 44f8ebf09bc53f945a7c71ed9ad8278c, type: 3}
+  - title: "\u7EDB\u96EA "
+    dialogue: "\u4E0D\u8FC7\u8FD8\u662F\u8981\u63D0\u9192\u9053\u957F\u4E00\u53E5\uFF0C\u6B64\u5730\u6709\u53EA\u5996\u602A\uFF0C\u5996\u529B\u6781\u4E3A\u5F3A\u76DB\uFF0C\u64C5\u957F\u541E\u566C\u4EBA\u5FC3\uFF0C\u6211\u4EEC\u4E5F\u662F\u56E0\u6B64\u88AB\u5C01\u5370\u3002"
+    onLeftSide: 1
+    portrait: {fileID: 0}
+  - title: "\u9999\u7389"
+    dialogue: "\u6B64\u8A00\u975E\u865A\u3002\u4F46\u5982\u82E5\u60F3\u964D\u670D\u5B83\u4E5F\u5E76\u975E\u65E0\u8BA1\u53EF\u65BD\u3002"
+    onLeftSide: 0
+    portrait: {fileID: 21300000, guid: 2497401746d47f94093c6fba91a8d989, type: 3}
+  - title: "\u9999\u7389"
+    dialogue: "\u636E\u4F20\u95FB\u8BB0\u8F7D\uFF0C\u6709\u4E00\u5757\u7B26\u7B93\u6CD5\u9635\u53EF\u4EE5\u9547\u538B\u8FD9\u53EA\u5996\u90AA\uFF0C\u53EA\u8981\u8DDF\u7740<color=red>\u7075\u8776</color>\u7684\u6307\u5F15\uFF0C\u4FBF\u53EF\u5230\u8FBE\u3002"
+    onLeftSide: 0
+    portrait: {fileID: 21300000, guid: 2497401746d47f94093c6fba91a8d989, type: 3}
+  - title: "\u7EDB\u96EA"
+    dialogue: "\u540C\u65F6\uFF0C<color=red>\u62FC\u51D1\u51FA\u4E00\u5F20\u5B8C\u6574\u7684\u7B26\u7B93</color>\u624D\u80FD\u542F\u52A8\u6CD5\u9635\uFF0C\u8FD9\u4E5F\u662F\u53EA\u6709\u9053\u957F\u80FD\u505A\u5230\u7684\u4E8B\u60C5\u3002"
+    onLeftSide: 1
+    portrait: {fileID: 21300000, guid: 44f8ebf09bc53f945a7c71ed9ad8278c, type: 3}
+  - title: "\u9999\u7389"
+    dialogue: "\u4E0D\u8FC7\uFF0C\u7075\u8776\u6709\u4E24\u79CD\u989C\u8272\uFF0C\u4E00\u79CD\u7EA2\u8272\uFF0C\u4E00\u79CD\u767D\u8272\uFF0C\u9053\u957F\u9700\u5F97\u8DDF\u7740<color=red><b>\u767D\u8272\u7075\u8776</b></color>\u8D70\u624D\u80FD\u5230\u8FBE\u6CD5\u9635\u3002"
+    onLeftSide: 0
+    portrait: {fileID: 21300000, guid: 2497401746d47f94093c6fba91a8d989, type: 3}
+  - title: "\u7EDB\u96EA"
+    dialogue: "\u4E0D\u2026\u2026\u662F\u8DDF\u7740<color=red><b>\u7EA2\u8272\u7075\u8776</b></color>\u3002"
+    onLeftSide: 1
+    portrait: {fileID: 21300000, guid: 44f8ebf09bc53f945a7c71ed9ad8278c, type: 3}
+  - title: "\u9999\u7389"
+    dialogue: "\u6211\u4EEC\u4E24\u4E2A\u4EBA\u8BF4\u8BDD\uFF0C\u4E00\u5B9A\u6709\u771F\u8BDD\u3002"
+    onLeftSide: 0
+    portrait: {fileID: 21300000, guid: 2497401746d47f94093c6fba91a8d989, type: 3}
+  filename: "1\u9999\u7389\u7EDB\u96EA.csv"
