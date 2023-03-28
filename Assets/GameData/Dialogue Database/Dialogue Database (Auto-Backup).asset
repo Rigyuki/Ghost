@@ -1731,7 +1731,7 @@ MonoBehaviour:
   - id: 1
     fields:
     - title: Title
-      value: "\u7EB8\u7247\u4EBA"
+      value: "\u7EB8\u7247\u4EBA 1"
       type: 0
       typeString: 
     - title: Description
@@ -5120,7 +5120,7 @@ MonoBehaviour:
   - id: 5
     fields:
     - title: Title
-      value: "\u65AD\u6865\u7EB8\u7247\u4EBA"
+      value: "\u65AD\u6865\u7EB8\u7247\u4EBA 2"
       type: 0
       typeString: 
     - title: Description
