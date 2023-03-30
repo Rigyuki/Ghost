@@ -6,6 +6,7 @@ using UnityEngine;
 
 namespace Scripts.Gameplay.Achievement
 {
+    [System.Obsolete]
     public enum endingNo { 
         ending1,
         ending2,
@@ -13,6 +14,7 @@ namespace Scripts.Gameplay.Achievement
     }
 
     //TODO: optimize performance....
+    [System.Obsolete]
     public class AchievementController : MonoBehaviour
     {
         float ChooseRoadNo = 0;

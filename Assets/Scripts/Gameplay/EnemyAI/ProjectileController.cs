@@ -16,16 +16,18 @@ public class ProjectileController : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] float maxDistance;
     float totDistance;
-    public void Prepare(Vector3 targetPos)
+    Transform target;
+    public void Prepare(Transform target)
     {
         animationPlayer.Play(0, prepareAnim, false, true);
-        this.dir = (targetPos - transform.position).normalized;
-        Vector3 diff = Camera.main.WorldToScreenPoint(targetPos) - Camera.main.WorldToScreenPoint(transform.position);
-        animationPlayer.transform.localEulerAngles = Vector3.forward * (Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg + 150);
+        this.target = target;
     }
     public void Shoot()
     {
         animationPlayer.Play(0, flyAnim, true, false);
+        this.dir = (target.position - transform.position).normalized;
+        Vector3 diff = Camera.main.WorldToScreenPoint(target.position) - Camera.main.WorldToScreenPoint(transform.position);
+        animationPlayer.transform.localEulerAngles = Vector3.forward * (Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg + 150);
     }
     public void Hit()
     {

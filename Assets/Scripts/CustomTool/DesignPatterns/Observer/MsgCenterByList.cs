@@ -18,6 +18,7 @@ namespace Scripts.CustomTool.DesignPatterns.ObserverPattern {
         public const int SAFE_DOOR_OPEN = 6;
 
         public const int ENDING = 7;
+        public const int ROAD_CHOOSING = 8;
 
 
         public static bool Enabled = true;
