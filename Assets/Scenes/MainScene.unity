@@ -3021,6 +3021,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecb5cae364acffd4a8a8fe57839d4c09, type: 3}
+--- !u!4 &543981853 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3807382536117712401, guid: a84bcadf2c0c42943924335858465711,
+    type: 3}
+  m_PrefabInstance: {fileID: 167932872}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &548830748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3182,6 +3188,12 @@ Transform:
   m_Father: {fileID: 28996639}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &627852303 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3807382537908018364, guid: a84bcadf2c0c42943924335858465711,
+    type: 3}
+  m_PrefabInstance: {fileID: 167932872}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &631073715
 GameObject:
   m_ObjectHideFlags: 0
@@ -9222,6 +9234,71 @@ MonoBehaviour:
   relatedButterfly: {fileID: 1744025206}
   blocks:
   - {fileID: 469778377}
+--- !u!4 &1388099163 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8033903151288740842, guid: a84bcadf2c0c42943924335858465711,
+    type: 3}
+  m_PrefabInstance: {fileID: 167932872}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1406292200
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1406292201}
+  - component: {fileID: 1406292203}
+  - component: {fileID: 1406292202}
+  m_Layer: 0
+  m_Name: DoorCloser
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1406292201
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406292200}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.27, y: 0.50000095, z: 0.92999697}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1388099163}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1406292202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406292200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab7bc7e69cbd4ce43a03d73ba28682ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  area: 2
+--- !u!65 &1406292203
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406292200}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 20}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1445752042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10412,6 +10489,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 144e095f4cbef0f4db83be7bfb8f5950, type: 3}
+--- !u!1 &1734864171 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3807382538114269326, guid: a84bcadf2c0c42943924335858465711,
+    type: 3}
+  m_PrefabInstance: {fileID: 167932872}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1734864174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734864171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeb5ecc7ad311ac479fb34905a4f224b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorLeft: {fileID: 627852303}
+  doorRight: {fileID: 543981853}
+  area: 2
 --- !u!114 &1744025206 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3622771529680539964, guid: b11af26dab7a4b442adee9ff56e3f786,
@@ -10788,6 +10886,11 @@ PrefabInstance:
         type: 3}
       propertyPath: higherConstraint
       value: 5.956371
+      objectReference: {fileID: 0}
+    - target: {fileID: 509092123512269294, guid: f9b6e843ef1333546943455289016266,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 509092123512269295, guid: f9b6e843ef1333546943455289016266,
         type: 3}
