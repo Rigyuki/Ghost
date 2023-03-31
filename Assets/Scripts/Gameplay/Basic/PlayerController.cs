@@ -7,6 +7,7 @@ using UnityEngine.Animations;
 using UnityGameFramework.Runtime;
 using Scripts.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 namespace Scripts.Gameplay.Basic
 {
@@ -174,6 +175,47 @@ namespace Scripts.Gameplay.Basic
         }
         #endregion
 
+        #region Audio
+        [Header("声音")]
+        [SerializeField] AudioSource audioSource;
+        public AudioClip moveClip;
+        public AudioClip runClip;
+        public AudioClip hitClip;
+        public AudioClip jumpClip;
+        void SetAudio()
+        {
+            if(frozen)
+                return;
+            if (audioSource.isPlaying )
+            {
+                return;
+            }
+            if(!grounded)
+            {
+                audioSource.Pause();
+                audioSource.clip = jumpClip;
+                audioSource.Play();
+            }
+            else if(dashing)
+            {
+                audioSource.Pause();
+                audioSource.clip = runClip;
+                audioSource.Play();
+            }
+            else if(walking)
+            {
+                audioSource.clip = moveClip;
+                audioSource.Play();
+            }
+
+            else 
+            {
+                audioSource.Pause();
+            }
+
+            
+        }
+        #endregion
         void Awake()
         {
             Init();
@@ -278,6 +320,7 @@ namespace Scripts.Gameplay.Basic
                 currentVelocity.y = 0;
             }
             SetAnimation();
+            SetAudio();
             controller.Move(currentVelocity * Time.deltaTime);
         }
 
@@ -294,6 +337,8 @@ namespace Scripts.Gameplay.Basic
             base.TakeDamage(damage);
             HPChangeSubject.Instance.Notify(1f * currentHP / maxHP);
             animationPlayer.Play(0, hit_base, facing, false, true);
+            // audioSource.clip = hitClip;
+            // audioSource.Play();
         }
 
         public override void Die()
