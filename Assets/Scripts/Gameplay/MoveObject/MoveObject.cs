@@ -12,6 +12,7 @@ namespace Scripts.Gameplay.MoveObject
         public void moveMountain()
         {
             StartCoroutine(_movingMountain());
+            Debug.Log("moving");
         }
 
         IEnumerator _movingMountain()
