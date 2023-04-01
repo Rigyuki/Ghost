@@ -367,7 +367,7 @@ MonoBehaviour:
   patrolSpeed: 3
   patrolWaitTime: 0.5
   patrolWalPoints: {fileID: 279134210}
-  ChaseDistance: 3
+  ChaseDistance: 5
 --- !u!114 &107765433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3303,6 +3303,22 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - guid: 60d6798a-98d6-47b7-b233-9df63b12fc2b
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5375909922153307508}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
 --- !u!4 &417660588
 Transform:
   m_ObjectHideFlags: 0
@@ -3690,8 +3706,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.9899745, y: 1, z: 1.081636}
-  m_Center: {x: -0.17261028, y: 0, z: 0.20486188}
+  m_Size: {x: 3.254814, y: 1, z: 1.081636}
+  m_Center: {x: -0.80503, y: 0, z: 0.20486188}
 --- !u!114 &451873573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3781,14 +3797,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451873570}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.710001, y: 0, z: -5.79}
+  m_LocalRotation: {x: 0, y: 0.87881714, z: 0, w: 0.4771588}
+  m_LocalPosition: {x: -3.55, y: 0, z: -6.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 27
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 123, z: 0}
 --- !u!1 &461815439
 GameObject:
   m_ObjectHideFlags: 0
@@ -59322,7 +59338,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1375353742}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.5300007, y: 0, z: -4.01}
+  m_LocalPosition: {x: -3.95, y: 0, z: -2.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -76299,7 +76315,16 @@ MonoBehaviour:
   monitorConversationDistanceFrequency: 1
   showCursorDuringConversation: 0
   pauseGameDuringConversation: 0
-  setActiveActions: []
+  setActiveActions:
+  - condition:
+      luaConditions: []
+      questConditions: []
+      acceptedTags: []
+      acceptedGameObjects: []
+      luaWizardIndex: 0
+      lastEvaluationValue: 0
+    target: {fileID: 5375909922153307509}
+    state: 0
   setEnabledActions: []
   setAnimatorStateActions: []
   onExecute:
@@ -76802,7 +76827,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5375909922153307509
 Transform:
   m_ObjectHideFlags: 0
@@ -77206,7 +77231,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6748970756460324602}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.22, y: 0.32, z: -10.453}
+  m_LocalPosition: {x: 1.98, y: 0.32, z: -8.97}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
