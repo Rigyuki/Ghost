@@ -54,7 +54,7 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     portrait: {fileID: 0}
-    spritePortrait: {fileID: 0}
+    spritePortrait: {fileID: 21300000, guid: 241536cc9866eb44c9529b0aa207a96b, type: 3}
     alternatePortraits: []
     spritePortraits: []
   - id: 2
@@ -75,7 +75,7 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
+    portrait: {fileID: 2800000, guid: e83ff5af76bdbf241bb953e3a3c966eb, type: 3}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
@@ -141,7 +141,7 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
+    portrait: {fileID: 2800000, guid: c951aa3c656dfa24abab192ee0fa5200, type: 3}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
@@ -164,7 +164,7 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     portrait: {fileID: 0}
-    spritePortrait: {fileID: 0}
+    spritePortrait: {fileID: 21300000, guid: 9f14fe7a97c1b834e9fe067dbdc4f9b8, type: 3}
     alternatePortraits: []
     spritePortraits: []
   - id: 7
@@ -185,7 +185,7 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
+    portrait: {fileID: 2800000, guid: ac76b9adc7c06f542959b4e782c58231, type: 3}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
@@ -462,11 +462,11 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Actor
-      value: 1
+      value: 4
       type: 5
       typeString: CustomFieldType_Actor
     - title: Conversant
-      value: 2
+      value: -1
       type: 5
       typeString: CustomFieldType_Actor
     overrideSettings:
@@ -508,11 +508,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 3
+        value: -1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -555,7 +555,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 389
-        y: 54
+        y: 55.31578
         width: 160
         height: 30
     - id: 1
@@ -573,7 +573,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 3
+        value: -1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -610,7 +610,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 393.17648
-        y: 133.23526
+        y: 134.55106
         width: 160
         height: 30
     - id: 2
@@ -628,7 +628,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 3
+        value: -1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -664,7 +664,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 392
+        x: 390.6842
         y: 195
         width: 160
         height: 30
@@ -683,7 +683,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: -1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -723,8 +723,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 395.1277
-        y: 251.68085
+        x: 400.39084
+        y: 252.99664
         width: 160
         height: 30
     - id: 5
@@ -742,7 +742,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 4
+        value: -1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -778,7 +778,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 393.66162
-        y: 327.71643
+        y: 329.03223
         width: 160
         height: 30
     - id: 6
@@ -832,7 +832,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 668.7121
-        y: 109.2195
+        y: 110.53528
         width: 160
         height: 30
     entryGroups: []
@@ -4639,7 +4639,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 263
-        y: 126
+        y: 127
         width: 160
         height: 30
     entryGroups: []
