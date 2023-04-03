@@ -8,12 +8,14 @@ namespace Scripts.Gameplay.Lantern {
 
     public class Scene1Lantern : MonoBehaviour
     {
+       // [SerializeField] Scene _Scene1_Lantern => SceneManager.GetSceneByName("Scene1_Lantern");
         public void changeLanternScene(bool isChange)
         {
             if (isChange)
             {
-                SceneManager.UnloadSceneAsync("TestScene1Main");
-                SceneManager.LoadSceneAsync("Scene1_Lantern");
+                 
+               // SceneManager.LoadScene("Scene1_Lantern", LoadSceneMode.Additive);
+                
             }
         }
 
@@ -33,8 +35,10 @@ namespace Scripts.Gameplay.Lantern {
         {
             if (obj.MsgId == MsgCenterByList.SAFE_DOOR_OPEN)
             {
-                SceneManager.LoadSceneAsync("TestScene1Main");
-                SceneManager.UnloadSceneAsync("Scene1_Lantern");
+                //SceneManager.UnloadSceneAsync("Scene1_Lantern");
+                this.gameObject.SetActive(false);
+                Debug.Log(obj.MsgId);
+
             }
         }
     }
