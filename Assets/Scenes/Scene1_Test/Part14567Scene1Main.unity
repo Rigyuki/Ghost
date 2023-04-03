@@ -466,8 +466,7 @@ MonoBehaviour:
   anotherQuestEntryState: 0
   luaCode: 'SetQuestState("Use yuezhi3", "success");
 
-    Variable["isUsedYuezhi3"]
-    = true'
+    Variable["isUsedYuezhi3"] = true'
   sequence: 
   sequenceSpeaker: {fileID: 0}
   sequenceListener: {fileID: 0}
@@ -555,8 +554,7 @@ MonoBehaviour:
   anotherQuestEntryState: 0
   luaCode: 'SetQuestState("Use yuezhi2", "success");
 
-    Variable["isUsedYuezhi2"]
-    = true'
+    Variable["isUsedYuezhi2"] = true'
   sequence: 
   sequenceSpeaker: {fileID: 0}
   sequenceListener: {fileID: 0}
@@ -644,8 +642,7 @@ MonoBehaviour:
   anotherQuestEntryState: 0
   luaCode: 'SetQuestState("Use yuezhi", "success");
 
-    Variable["isUsedYuezhi"]
-    = true'
+    Variable["isUsedYuezhi"] = true'
   sequence: 
   sequenceSpeaker: {fileID: 0}
   sequenceListener: {fileID: 0}
@@ -1703,6 +1700,7 @@ GameObject:
   m_Component:
   - component: {fileID: 222641698}
   - component: {fileID: 222641697}
+  - component: {fileID: 222641699}
   m_Layer: 0
   m_Name: Lantern Puzzle
   m_TagString: Untagged
@@ -1741,8 +1739,7 @@ MonoBehaviour:
   anotherQuestEntryState: 0
   luaCode: 'Variable["isGetDaylightTalisman"] = true;
 
-    SetQuestState("GetDaylightTalisman",
-    "success")'
+    SetQuestState("GetDaylightTalisman", "success")'
   sequence: 
   sequenceSpeaker: {fileID: 0}
   sequenceListener: {fileID: 0}
@@ -1804,6 +1801,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 55, z: 0}
+--- !u!114 &222641699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222641696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 635f961ee552b3e43839d5fd5a17825f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &249447883
 GameObject:
   m_ObjectHideFlags: 0
@@ -3820,8 +3829,7 @@ MonoBehaviour:
   anotherQuestEntryState: 0
   luaCode: 'SetQuestState("Use yueshen", "success");
 
-    Variable["isUsedYueshen"]
-    = true'
+    Variable["isUsedYueshen"] = true'
   sequence: 
   sequenceSpeaker: {fileID: 0}
   sequenceListener: {fileID: 0}
