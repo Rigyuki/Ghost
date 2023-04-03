@@ -510,6 +510,20 @@ MonoBehaviour:
       value: "\u662F\u5426\u4F7F\u7528\u4E86\u6708\u795E\u4E4B\u5962"
       type: 0
       typeString: 
+  - id: 11
+    fields:
+    - title: Name
+      value: isHouse
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: "\u662F\u5426\u89E6\u53D1\u623F\u5B50"
+      type: 0
+      typeString: 
   conversations:
   - id: 4
     fields:
@@ -960,8 +974,8 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
-      userScript: 
+      conditionsString: Variable["isHouse"] == false
+      userScript: Variable["isHouse"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls:
