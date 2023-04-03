@@ -3657,7 +3657,7 @@ MonoBehaviour:
   useConversationTitlePicker: 1
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: 976055cb3a2446e4c883c50ab791c262, type: 2}
+  selectedDatabase: {fileID: 11400000, guid: 974971bcb2a4ce94bad450f9a0ead053, type: 2}
 --- !u!1 &997418839
 GameObject:
   m_ObjectHideFlags: 0
@@ -5146,7 +5146,7 @@ PrefabInstance:
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: initialDatabase
       value: 
-      objectReference: {fileID: 11400000, guid: 976055cb3a2446e4c883c50ab791c262,
+      objectReference: {fileID: 11400000, guid: 974971bcb2a4ce94bad450f9a0ead053,
         type: 2}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.cameraSettings.cameraAngles
