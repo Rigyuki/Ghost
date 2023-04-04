@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG;
 using DG.Tweening;
+using PixelCrushers.DialogueSystem;
+
 
 namespace Scripts.Gameplay.MoveObject 
 {
@@ -10,6 +12,10 @@ namespace Scripts.Gameplay.MoveObject
     {
         [SerializeField] GameObject Mountain;
         [SerializeField] GameObject Stone;
+        [SerializeField] GameObject Brige1;
+        [SerializeField] GameObject Brige2;
+        [SerializeField] GameObject BrigeCollider;
+        [SerializeField] DialogueDatabase dialogue;
         public void moveMountain()
         {
             StartCoroutine(_movingMountain());
@@ -17,7 +23,9 @@ namespace Scripts.Gameplay.MoveObject
         }
         public void moveStone()
         {
+            StartCoroutine(SetBoolBrige());
             StartCoroutine(_movingStone());
+            
             Debug.Log("moving11");
         }
         IEnumerator _movingMountain()
@@ -27,8 +35,16 @@ namespace Scripts.Gameplay.MoveObject
         }
         IEnumerator _movingStone()
         {
-            Mountain.transform.DOMove(new Vector3(-2.33f, 0.13f, -0.97f), 2f);
+            Stone.transform.DOMove(new Vector3(1.26f, -0.05f, 2.549f), 2f);
             yield return null;
+        }
+        IEnumerator SetBoolBrige()
+        {
+            yield return new WaitForSeconds(2f);
+            Brige1.SetActive(false);
+            Brige2.SetActive(true);
+            BrigeCollider.SetActive(false);
+            
         }        
     }
 
