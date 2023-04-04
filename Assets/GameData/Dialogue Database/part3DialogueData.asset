@@ -1976,8 +1976,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 402.19452, y: 270.77234}
-    canvasZoom: 1.0300001
+    canvasScrollPosition: {x: 218.85352, y: 89.80187}
+    canvasZoom: 0.8199999
   - id: 6
     fields:
     - title: Title
