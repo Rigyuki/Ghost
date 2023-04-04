@@ -14,21 +14,19 @@ namespace Scripts.Gameplay.GhostBook {
         private Button anecdoteButton;
         private Button collectionButton;
 
-
         public int currentAmount = 0;
 
         private Transform anecdote;
         private Transform collection;
-
-
+         
         private void Start()
         {
+
             leftButton = GameObject.Find("Canvas/GhostBook/btn_Left").GetComponent<Button>();
             rightButton = GameObject.Find("Canvas/GhostBook/btn_Right").GetComponent<Button>();
 
             anecdoteButton = GameObject.Find("Canvas/GhostBook/btn_Anecdote").GetComponent<Button>();
             collectionButton = GameObject.Find("Canvas/GhostBook/btn_Collection").GetComponent<Button>();
-
 
             leftButton.onClick.AddListener(delegate { switchAnecdotePage(-1); });
             rightButton.onClick.AddListener(delegate { switchAnecdotePage(1); });
@@ -37,7 +35,6 @@ namespace Scripts.Gameplay.GhostBook {
 
             anecdote = GameObject.Find("Canvas/GhostBook/Anecdote").transform;
             collection = GameObject.Find("Canvas/GhostBook/Collection").transform;
-
 
         }
 
@@ -66,6 +63,7 @@ namespace Scripts.Gameplay.GhostBook {
                 collectionButton.enabled = false;
             }
         }
+       
 
     }
 }
