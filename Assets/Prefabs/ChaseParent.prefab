@@ -114,6 +114,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 475794980002253512}
     m_Modifications:
+    - target: {fileID: 5476742821399584337, guid: 5a074fc102a45cc44942ea1497669d6f,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5476742821399584350, guid: 5a074fc102a45cc44942ea1497669d6f,
         type: 3}
       propertyPath: m_Mesh
@@ -143,6 +148,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheyao
+      objectReference: {fileID: 0}
+    - target: {fileID: 5476742821574254046, guid: 5a074fc102a45cc44942ea1497669d6f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5476742821574254047, guid: 5a074fc102a45cc44942ea1497669d6f,
         type: 3}
@@ -198,6 +208,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5476742822152158090, guid: 5a074fc102a45cc44942ea1497669d6f,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5476742822152158091, guid: 5a074fc102a45cc44942ea1497669d6f,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a074fc102a45cc44942ea1497669d6f, type: 3}

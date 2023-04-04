@@ -6,7 +6,7 @@ using UnityEngine;
 using Scripts.Gameplay.Achievement;
 public class EndingManager : MonoBehaviour
 {
-     
+    public int chooseRoadNo;
     private void OnEnable()
     {
         MsgCenterByList.AddListener(OnMsg);
@@ -19,15 +19,27 @@ public class EndingManager : MonoBehaviour
 
     private void OnMsg(CommonMsg obj)
     {
-        if (obj.MsgId != MsgCenterByList.ENDING) return;
-        OnShowEnding((endingNo)obj.intParam);
-       
+        if (obj.MsgId == MsgCenterByList.ROAD_CHOOSING)
+        {
+            chooseRoadNo += obj.intParam;
+        }
+        else if(obj.MsgId==MsgCenterByList.ENDING)
+        {
+            OnShowEnding();
+        }
     }
 
-    private void OnShowEnding(endingNo no)
+    private void OnShowEnding()
     {
-        var ending = no;
-
+        switch(chooseRoadNo)
+        {
+            case 3:
+                break;
+            case -3:
+                break;
+            default:
+                break;
+        }
         //TODO: show last ending 
     }
 

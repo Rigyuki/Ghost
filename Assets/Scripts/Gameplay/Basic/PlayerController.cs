@@ -14,7 +14,6 @@ namespace Scripts.Gameplay.Basic
     [RequireComponent(typeof(CharacterController))]
     public class PlayerController : CharacterBase
     {
-        public static int redButterfly = 0;
         public Axis AxisTest;
         CharacterController controller;
 
@@ -336,7 +335,8 @@ namespace Scripts.Gameplay.Basic
         {
             base.TakeDamage(damage);
             HPChangeSubject.Instance.Notify(1f * currentHP / maxHP);
-            animationPlayer.Play(0, hit_base, facing, false, true);
+            if (!dead)
+                animationPlayer.Play(0, hit_base, facing, false, true);
             // audioSource.clip = hitClip;
             // audioSource.Play();
         }

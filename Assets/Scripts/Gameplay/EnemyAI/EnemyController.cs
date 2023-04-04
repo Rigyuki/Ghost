@@ -16,7 +16,7 @@ public class EnemyController : MonoBehaviour
     
     [SerializeField] AnimationPlayer ani;
     [SerializeField] AnimationPlayer aniAttack;
-    [SerializeField] AnimationPlayer aniAttackEffect;
+    //[SerializeField] AnimationPlayer aniAttackEffect;
    
     public string enemy_idle_base = "sheyao_stand";
     public string enemy_patrol_base="sheyao_walk";
@@ -46,9 +46,12 @@ public class EnemyController : MonoBehaviour
 
     [SerializeField] GameObject projectilePref;
 
-    [SerializeField] GameObject AchievementCon;
+    //[SerializeField] GameObject AchievementCon;
 
-     
+    [Header("Audio")]
+    [SerializeField] AudioClip[] attackSfx;
+    [SerializeField] AudioSource walkAudioSource;
+    [SerializeField] AudioSource attackAudioSource;
 
     private void Start()
     {
@@ -86,6 +89,9 @@ public class EnemyController : MonoBehaviour
             return;
         prevAttackTime = Time.time;
 
+        attackAudioSource.clip = attackSfx[UnityEngine.Random.Range(0, attackSfx.Length)];
+        attackAudioSource.Play();
+
         //Debug.Log("attacking");
         aniAttack.gameObject.SetActive(true);
         aniAttack.Play(0, enemy_attack_base, facing, true);
@@ -93,7 +99,7 @@ public class EnemyController : MonoBehaviour
 
         GameObject projectile = Instantiate(projectilePref);
         projectile.transform.position = transform.TransformPoint(Vector3.up);
-        projectile.GetComponent<ProjectileController>().Prepare(player.position);
+        projectile.GetComponent<ProjectileController>().Prepare(player);
 
     }
 
