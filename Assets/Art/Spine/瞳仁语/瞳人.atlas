@@ -1,0 +1,111 @@
+
+瞳人.png
+size: 1465,1465
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+p_1
+  rotate: false
+  xy: 2, 222
+  size: 233, 544
+  orig: 337, 646
+  offset: 76, 51
+  index: -1
+p_2
+  rotate: false
+  xy: 472, 224
+  size: 220, 542
+  orig: 337, 646
+  offset: 82, 49
+  index: -1
+p_3
+  rotate: false
+  xy: 1071, 243
+  size: 210, 523
+  orig: 337, 646
+  offset: 88, 57
+  index: -1
+tongkong
+  rotate: true
+  xy: 694, 248
+  size: 134, 126
+  orig: 135, 126
+  offset: 1, 0
+  index: -1
+yanbai
+  rotate: false
+  xy: 694, 631
+  size: 298, 135
+  orig: 298, 135
+  offset: 0, 0
+  index: -1
+yanpi_s
+  rotate: false
+  xy: 1071, 7
+  size: 339, 108
+  orig: 339, 108
+  offset: 0, 0
+  index: -1
+yanpi_x
+  rotate: false
+  xy: 1071, 117
+  size: 339, 124
+  orig: 339, 124
+  offset: 0, 0
+  index: -1
+上眼皮
+  rotate: false
+  xy: 694, 384
+  size: 339, 108
+  orig: 339, 108
+  offset: 0, 0
+  index: -1
+下眼皮
+  rotate: true
+  xy: 1283, 427
+  size: 339, 124
+  orig: 339, 124
+  offset: 0, 0
+  index: -1
+人1
+  rotate: false
+  xy: 237, 222
+  size: 233, 544
+  orig: 337, 646
+  offset: 76, 51
+  index: -1
+人2
+  rotate: true
+  xy: 527, 2
+  size: 220, 542
+  orig: 337, 646
+  offset: 82, 49
+  index: -1
+人3
+  rotate: true
+  xy: 2, 10
+  size: 210, 523
+  orig: 337, 646
+  offset: 88, 57
+  index: -1
+眼白
+  rotate: false
+  xy: 694, 494
+  size: 298, 135
+  orig: 298, 135
+  offset: 0, 0
+  index: -1
+瞳孔
+  rotate: false
+  xy: 1283, 299
+  size: 142, 126
+  orig: 197, 126
+  offset: 55, 0
+  index: -1
+示意图
+  rotate: false
+  xy: 2, 768
+  size: 1377, 695
+  orig: 1377, 695
+  offset: 0, 0
+  index: -1

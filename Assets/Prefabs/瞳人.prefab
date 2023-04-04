@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 62cb7d75a3d5eb340ab0b0a36da5ebff, type: 2}
-  initialSkinName: d
+  initialSkinName: n
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 62cb7d75a3d5eb340ab0b0a36da5ebff, type: 2}
-  initialSkinName: d
+  initialSkinName: n
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
