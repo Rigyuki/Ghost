@@ -26,6 +26,8 @@ public class EnemyController : MonoBehaviour
     public string enemy_effect2_base = "2";
     public string enemy_effect3_base = "3";
 
+    public bool allowAttack = true;
+
     int facing = 1;//1=Ç°£¬2=ºó;4=×ó£¬8=ÓÒ
  
     bool chasing;
@@ -71,7 +73,7 @@ public class EnemyController : MonoBehaviour
 
     private void OnMsg(CommonMsg obj)
     {
-        if (obj.MsgId == MsgCenterByList.ENEMY_AI_ATTACK) EnemyAttack();
+        if (allowAttack && obj.MsgId == MsgCenterByList.ENEMY_AI_ATTACK) EnemyAttack();
         if (obj.MsgId == MsgCenterByList.ENEMY_AI_CHASE) EnemyChasing();
         if (obj.MsgId == MsgCenterByList.ENEMY_AI_PATROL) EnemyPatrol();
     }

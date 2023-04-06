@@ -51,7 +51,7 @@ namespace Scripts.Gameplay.Chase
             MsgCenterByList.SendMessage(new CommonMsg()
             {
                 MsgId = MsgCenterByList.ROAD_CHOOSING,
-                intParam = isYellowButterfly ? 1 : -1
+                intParam = isYellowButterfly ? 1 : 0
             });
             ButterflySelectedSubject.Instance.Notify(this);
             Destroy(GetComponent<Collider>());

@@ -18,10 +18,12 @@ namespace Scripts.Gameplay.Lantern
         private void OnEnable()
         {
             LanternSwitchSubject.Instance.Register(SwitchLantern);
+            LanternResetSubject.Instance.Register(SwitchOffForObserver);
         }
         private void OnDisable()
         {
             LanternSwitchSubject.Instance.Unregister(SwitchLantern);
+            LanternResetSubject.Instance.Unregister(SwitchOffForObserver);
         }
 
         void SwitchLantern(object target)
@@ -47,6 +49,10 @@ namespace Scripts.Gameplay.Lantern
             isOn = false;
             //meshRenderer.material = offMat;
             spriteRenderer.sprite = offSprite;
+        }
+        void SwitchOffForObserver(object arg)
+        {
+            SwitchOff();
         }
     }
 }

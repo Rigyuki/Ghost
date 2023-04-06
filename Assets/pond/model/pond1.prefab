@@ -1518,7 +1518,7 @@ MeshCollider:
   m_GameObject: {fileID: 7878708909386897711}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -1616,7 +1616,7 @@ MeshCollider:
   m_GameObject: {fileID: 7878708909423807361}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -1631,7 +1631,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7878708909622498329}
   - component: {fileID: 7878708909622498330}
-  - component: {fileID: 7878708909622498331}
   - component: {fileID: 7878708909622498332}
   m_Layer: 0
   m_Name: shadowCamera
@@ -1698,14 +1697,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7878708909622498331
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7878708909622498333}
-  m_Enabled: 1
 --- !u!114 &7878708909622498332
 MonoBehaviour:
   m_ObjectHideFlags: 0
