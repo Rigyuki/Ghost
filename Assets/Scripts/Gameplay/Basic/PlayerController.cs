@@ -20,7 +20,8 @@ namespace Scripts.Gameplay.Basic
         bool hit;
         bool dead;
 
-
+        [SerializeField] GameObject dialogueBox;
+        bool dialogueOngoing => dialogueBox && dialogueBox.activeSelf;
 
         #region movement
 
@@ -30,15 +31,16 @@ namespace Scripts.Gameplay.Basic
         public float jumpSpeed = 10;
 
         //todo:移动入口
-         public Vector3 Axis => transform.rotation==new Quaternion(0,-1,0,0)
-             ? (Input.GetAxis("Vertical")*(-1) * transform.right - Input.GetAxis("Horizontal") * (-1) * transform.forward).normalized
-            : (Input.GetAxis("Vertical") * transform.right - Input.GetAxis("Horizontal") * transform.forward).normalized;
+        public Vector3 Axis => dialogueOngoing ? Vector3.zero :
+            (transform.rotation == new Quaternion(0, -1, 0, 0)
+            ? (Input.GetAxis("Vertical") * (-1) * transform.right - Input.GetAxis("Horizontal") * (-1) * transform.forward).normalized
+           : (Input.GetAxis("Vertical") * transform.right - Input.GetAxis("Horizontal") * transform.forward).normalized);
         
         
         //public Vector3 Axis => (Input.GetAxis("Vertical") * transform.right - Input.GetAxis("Horizontal") * transform.forward).normalized;
 
        
-        public bool JumpPressed => Input.GetKey(KeyCode.Space);
+        public bool JumpPressed => Input.GetKey(KeyCode.Space) && !dialogueOngoing;
         Vector3 horizontalVelocity = Vector3.zero;
         Vector3 currentVelocity = Vector3.zero;
         Vector3 targetVelocity;
@@ -100,7 +102,7 @@ namespace Scripts.Gameplay.Basic
         [SerializeField] float dashSpeed = 4;
         [SerializeField] float dashTime = 0.5f;
         [SerializeField] KeyCode dashKey = KeyCode.F;
-        public bool DashPressed => unlockDash && Input.GetKeyDown(dashKey);
+        public bool DashPressed => unlockDash && Input.GetKeyDown(dashKey) && !dialogueOngoing;
 
         void Dash()
         {
@@ -130,7 +132,7 @@ namespace Scripts.Gameplay.Basic
         public float putOffsetY;
         void PickOrPut()
         {
-            if (!unlockMove || !Input.GetMouseButtonDown(0)) return;
+            if (dialogueOngoing || !unlockMove || !Input.GetMouseButtonDown(0)) return;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (targetObject)
@@ -269,7 +271,7 @@ namespace Scripts.Gameplay.Basic
             ChangeFacing(axis);
             CheckPlatform();
             Dash();
-            if (!frozen&&!DialogueManager.instance.dialogueOngoing)
+            if (!frozen)
             {
                 PickOrPut();
                 if (!dashing)

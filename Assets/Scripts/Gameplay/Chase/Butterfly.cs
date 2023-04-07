@@ -43,11 +43,10 @@ namespace Scripts.Gameplay.Chase
         }
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
-            {
-                started = true;
-                follower = other.transform;
-            }
+            if (other.gameObject.layer != LayerMask.NameToLayer("Player"))
+                return;
+            started = true;
+            follower = other.transform;
             MsgCenterByList.SendMessage(new CommonMsg()
             {
                 MsgId = MsgCenterByList.ROAD_CHOOSING,

@@ -4,18 +4,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using PixelCrushers.DialogueSystem;
 
 namespace Scripts.Gameplay.Chase
 {
     public class EndingManager : MonoBehaviour
     {
         [SerializeField] SpriteRenderer trigram;
-        [SerializeField] DialogueData ending;
-        [SerializeField] DialogueData trigramEnabled;
-        [SerializeField] DialogueData snakeDisappear;
+        [SerializeField] string ending;
+        [SerializeField] string trigramEnabled;
+        [SerializeField] string snakeDisappear;
         [SerializeField] Image whiteImage;
         public int chooseRoadNo;
         [SerializeField] GameObject snake;
+        [SerializeField] DialogueSystemController dialogueManager;
+        [SerializeField] GameObject dialogueBox;
         private void OnEnable()
         {
             MsgCenterByList.AddListener(OnMsg);
@@ -57,9 +60,8 @@ namespace Scripts.Gameplay.Chase
         }
         IEnumerator SnakeChase()
         {
-            DialogueManager.instance.Load(ending);
-            DialogueManager.instance.Next();
-            while (DialogueManager.instance.gameObject.activeSelf)
+            dialogueManager.StartConversation(ending);
+            while (dialogueBox.activeSelf)
                 yield return null;
             yield return new WaitForSeconds(1f);
             whiteImage.gameObject.SetActive(true);
@@ -77,9 +79,8 @@ namespace Scripts.Gameplay.Chase
         }
         IEnumerator TrigramAppear()
         {
-            DialogueManager.instance.Load(ending);
-            DialogueManager.instance.Next();
-            while (DialogueManager.instance.gameObject.activeSelf)
+            dialogueManager.StartConversation(ending);
+            while (dialogueBox.activeSelf)
                 yield return null;
             float a = 0;
             while (a < 2)
@@ -90,9 +91,8 @@ namespace Scripts.Gameplay.Chase
             }
             trigram.color = Color.white;
             yield return new WaitForSeconds(0.5f);
-            DialogueManager.instance.Load(trigramEnabled);
-            DialogueManager.instance.Next();
-            while (DialogueManager.instance.gameObject.activeSelf)
+            dialogueManager.StartConversation(trigramEnabled);
+            while (dialogueBox.activeSelf)
             {
                 yield return null;
             }
@@ -103,8 +103,7 @@ namespace Scripts.Gameplay.Chase
                 snake.transform.localScale = a / 3 * Vector3.one;
                 yield return null;
             }
-            DialogueManager.instance.Load(snakeDisappear);
-            DialogueManager.instance.Next();
+            dialogueManager.StartConversation(snakeDisappear);
             while (a > 0)
             {
                 a -= Time.deltaTime;
@@ -112,7 +111,7 @@ namespace Scripts.Gameplay.Chase
                 yield return null;
             }
             Destroy(snake);
-            while (DialogueManager.instance.gameObject.activeSelf)
+            while (dialogueBox.activeSelf)
                 yield return null;
             yield return new WaitForSeconds(2f);
             a = 0;
