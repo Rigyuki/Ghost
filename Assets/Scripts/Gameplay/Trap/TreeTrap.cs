@@ -11,7 +11,7 @@ namespace Scripts.Gameplay.Trap
         protected override void TakeEffect(PlayerController player)
         {
             player.StartBuff(new Buff(this, BuffType.Frozen, lastTime: freezeTime));
-            Destroy(gameObject);
+            GetComponent<Collider>().enabled = false;
         }
     }
 }
