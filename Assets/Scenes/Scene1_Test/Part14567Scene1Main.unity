@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1897587927}
-  m_IndirectSpecularColor: {r: 0.16559908, g: 0.24230522, b: 0.34105834, a: 1}
+  m_IndirectSpecularColor: {r: 0.16559035, g: 0.24231488, b: 0.3410575, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -63958,7 +63958,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!224 &1547149242
 RectTransform:

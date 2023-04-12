@@ -11663,8 +11663,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 32.521584, y: 25.93964}
-    canvasZoom: 0.7599999
+    canvasScrollPosition: {x: 24.572731, y: 462.13043}
+    canvasZoom: 1.0599997
   - id: 29
     fields:
     - title: Title
@@ -12655,8 +12655,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 94.13475, y: 380.08292}
-    canvasZoom: 0.91000026
+    canvasScrollPosition: {x: 54.54544, y: 610.4606}
+    canvasZoom: 0.88000035
   - id: 31
     fields:
     - title: Title
@@ -12981,7 +12981,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 107, y: 0}
     canvasZoom: 1
   - id: 32
     fields:
@@ -13140,7 +13140,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 390.98163
-        y: 124.82352
+        y: 122.98866
         width: 160
         height: 30
     - id: 46
@@ -13526,7 +13526,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 619.25757
+        x: 620.17505
         y: 244.1417
         width: 160
         height: 30
@@ -13586,8 +13586,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 105.9352}
-    canvasZoom: 0.8799999
+    canvasScrollPosition: {x: 207.70258, y: 0}
+    canvasZoom: 1.0899997
   - id: 33
     fields:
     - title: Title
@@ -13960,7 +13960,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 328.85992
+        x: 327.94247
         y: 186.28288
         width: 160
         height: 30
@@ -14242,8 +14242,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.84999985
+    canvasScrollPosition: {x: 72.8698, y: 330.2753}
+    canvasZoom: 1.0899997
   - id: 35
     fields:
     - title: Title
