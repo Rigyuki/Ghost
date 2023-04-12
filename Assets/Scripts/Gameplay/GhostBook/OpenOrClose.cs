@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Spine.Unity;
 
 namespace Scripts.Gameplay.GhostBook
 {
@@ -13,6 +14,7 @@ namespace Scripts.Gameplay.GhostBook
         private Button openTaichiTrigramsButton;
         [SerializeField] private CanvasGroup GhostBook;
         [SerializeField] private CanvasGroup TaichiTrigrams;
+        [SerializeField] SkeletonGraphic sg;
 
         private bool isBookOpen;
         private void Start()
@@ -31,7 +33,15 @@ namespace Scripts.Gameplay.GhostBook
 
         public  void OpenGhostBook(int i)
         {
-            GhostBook.alpha = i;             
+            GhostBook.alpha = i;   
+            if(i==1)
+            {
+                sg.AnimationState.SetAnimation(0, "3", false);
+            }
+            else
+            {
+                sg.AnimationState.SetAnimation(0, "4", false);
+            }
         }
 
         public void OpenTaichiTrigrams()

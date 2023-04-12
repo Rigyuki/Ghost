@@ -100,7 +100,7 @@ public class EnemyController : MonoBehaviour
         ani.gameObject.SetActive(false);
 
         GameObject projectile = Instantiate(projectilePref);
-        projectile.transform.position = transform.TransformPoint(Vector3.up);
+        projectile.transform.position = transform.TransformPoint(Vector3.zero);
         projectile.GetComponent<ProjectileController>().Prepare(player);
 
     }

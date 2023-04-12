@@ -17,14 +17,19 @@ public class ProjectileController : MonoBehaviour
     [SerializeField] float maxDistance;
     float totDistance;
     Transform target;
+    Collider thisCollider;
     public void Prepare(Transform target)
     {
         animationPlayer.Play(0, prepareAnim, false, true);
         this.target = target;
+        thisCollider = GetComponent<Collider>();
+        thisCollider.enabled = false;
     }
     public void Shoot()
     {
+        thisCollider.enabled = true;
         animationPlayer.Play(0, flyAnim, true, false);
+        transform.Translate(Vector3.up);
         this.dir = (target.position - transform.position).normalized;
         Vector3 diff = Camera.main.WorldToScreenPoint(target.position) - Camera.main.WorldToScreenPoint(transform.position);
         animationPlayer.transform.localEulerAngles = Vector3.forward * (Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg + 150);

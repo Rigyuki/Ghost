@@ -44,7 +44,7 @@ namespace Scripts.Gameplay.Chase
         private void OnShowEnding()
         {
             snake.SetActive(true);
-            if (chooseRoadNo >= 3)
+            if (chooseRoadNo >= 1)
                 ShowBE();
             else
                 ShowGE();
