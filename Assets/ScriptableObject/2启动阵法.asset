@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 684451088bde5a14abae86b42c81c2db, type: 3}
+  m_Name: "2\u542F\u52A8\u9635\u6CD5"
+  m_EditorClassIdentifier: 
+  dialogues:
+  - title: "\u86C7\u5996"
+    dialogue: "\u4EC0 \u2026\u2026\u4EC0\u4E48\uFF1F\u8FD9\u7ADF\u662F\u2026\u2026\uFF01"
+    onLeftSide: 1
+    portrait: {fileID: 21300000, guid: 7f11de70ce04b304da868857ae54658d, type: 3}
+  filename: "2\u542F\u52A8\u9635\u6CD5.csv"

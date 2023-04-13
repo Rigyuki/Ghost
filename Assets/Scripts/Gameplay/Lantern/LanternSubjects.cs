@@ -22,4 +22,6 @@ namespace Scripts.Gameplay.Lantern
     }
     public class LanternUnlockSubject : SubjectSingleton<LanternUnlockSubject>
     { }
+    public class LanternResetSubject : SubjectSingleton<LanternResetSubject>
+    { }
 }

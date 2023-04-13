@@ -7,18 +7,23 @@ namespace Scripts.Gameplay.Lantern
     {
         public LanternEnum lanternGroup;
         public int lanternGroupInt { get => (int)lanternGroup; }
-        public MeshRenderer meshRenderer;
-        public Material onMat;
-        public Material offMat;
+        //public MeshRenderer meshRenderer;
+        public SpriteRenderer spriteRenderer;
+        //public Material onMat;
+        public Sprite onSprite;
+        //public Material offMat;
+        public Sprite offSprite;
         public bool isOn { get; private set; }
 
         private void OnEnable()
         {
             LanternSwitchSubject.Instance.Register(SwitchLantern);
+            LanternResetSubject.Instance.Register(SwitchOffForObserver);
         }
         private void OnDisable()
         {
             LanternSwitchSubject.Instance.Unregister(SwitchLantern);
+            LanternResetSubject.Instance.Unregister(SwitchOffForObserver);
         }
 
         void SwitchLantern(object target)
@@ -36,12 +41,18 @@ namespace Scripts.Gameplay.Lantern
         void SwitchOn()
         {
             isOn = true;
-            meshRenderer.material = onMat;
+            //meshRenderer.material = onMat;
+            spriteRenderer.sprite = onSprite;
         }
         void SwitchOff()
         {
             isOn = false;
-            meshRenderer.material = offMat;
+            //meshRenderer.material = offMat;
+            spriteRenderer.sprite = offSprite;
+        }
+        void SwitchOffForObserver(object arg)
+        {
+            SwitchOff();
         }
     }
 }

@@ -104,6 +104,8 @@ public class AIController : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        if (!target)
+            return;
         Gizmos.color = Color.green;
         Gizmos.DrawLine(transform.position, target.transform.position);
     }

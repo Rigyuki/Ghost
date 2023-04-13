@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Scripts.CustomTool.DesignPatterns.ObserverPattern;
 
 namespace Scripts.Gameplay.Chase
 {
@@ -42,13 +43,15 @@ namespace Scripts.Gameplay.Chase
         }
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
+            if (other.gameObject.layer != LayerMask.NameToLayer("Player"))
+                return;
+            started = true;
+            follower = other.transform;
+            MsgCenterByList.SendMessage(new CommonMsg()
             {
-                started = true;
-                follower = other.transform;
-            }
-            if (isYellowButterfly)
-                ++Basic.PlayerController.redButterfly;
+                MsgId = MsgCenterByList.ROAD_CHOOSING,
+                intParam = isYellowButterfly ? 1 : 0
+            });
             ButterflySelectedSubject.Instance.Notify(this);
             Destroy(GetComponent<Collider>());
         }

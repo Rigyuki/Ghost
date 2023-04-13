@@ -719,6 +719,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5156643890340484079, guid: 74da480ec89356447b17654bc8e247c5,
         type: 3}
+      propertyPath: onSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3414cc6710d47f34395b7e43d8af7794,
+        type: 3}
+    - target: {fileID: 5156643890340484079, guid: 74da480ec89356447b17654bc8e247c5,
+        type: 3}
+      propertyPath: offSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9c573a81e31d4d04d99a3db211d9fbaa,
+        type: 3}
+    - target: {fileID: 5156643890340484079, guid: 74da480ec89356447b17654bc8e247c5,
+        type: 3}
       propertyPath: lanternGroup
       value: 16
       objectReference: {fileID: 0}
@@ -787,6 +799,12 @@ PrefabInstance:
       propertyPath: relatedLantern
       value: 186
       objectReference: {fileID: 0}
+    - target: {fileID: 8650460038714813477, guid: 74da480ec89356447b17654bc8e247c5,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9c573a81e31d4d04d99a3db211d9fbaa,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74da480ec89356447b17654bc8e247c5, type: 3}
 --- !u!4 &3976755072599954535 stripped
