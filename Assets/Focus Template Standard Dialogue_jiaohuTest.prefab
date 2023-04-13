@@ -656,7 +656,7 @@ GameObject:
   - component: {fileID: 22492926}
   - component: {fileID: 11477722}
   m_Layer: 5
-  m_Name: Focus Template Standard Dialogue UI 2
+  m_Name: Focus Template Standard Dialogue_jiaohuTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1767,7 +1767,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0.2
+          m_FloatArgument: 0.5
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -4107,7 +4107,7 @@ GameObject:
   - component: {fileID: 11415250}
   - component: {fileID: 11445296}
   - component: {fileID: 11416484}
-  - component: {fileID: 6530767154808299995}
+  - component: {fileID: 4483324644871951844}
   m_Layer: 5
   m_Name: Continue Button
   m_TagString: Untagged
@@ -4218,7 +4218,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6530767154808299995}
+      - m_Target: {fileID: 4483324644871951844}
         m_TargetAssemblyTypeName: PixelCrushers.DialogueSystem.DialogueSystemTrigger,
           Assembly-CSharp-firstpass
         m_MethodName: OnUse
@@ -4275,7 +4275,7 @@ MonoBehaviour:
   skipIfBeingClickedBySubmit: 1
   simulateButtonClick: 1
   simulateButtonDownDuration: 0.1
---- !u!114 &6530767154808299995
+--- !u!114 &4483324644871951844
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4304,7 +4304,7 @@ MonoBehaviour:
   setAnotherQuestEntryState: 0
   anotherQuestEntryNumber: 1
   anotherQuestEntryState: 0
-  luaCode: Variable["isYuezhi_Xiangyu"] = true
+  luaCode: Variable["isAlertButtonClick"] = true
   sequence: 
   sequenceSpeaker: {fileID: 0}
   sequenceListener: {fileID: 0}
