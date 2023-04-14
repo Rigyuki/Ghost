@@ -2276,7 +2276,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\u5728\u4E0B\u662F\u9999\u7389\uFF0C\u662F\u7261\u4E39\u82B1\u5996\u3002\u3002\u3002\u3002\u3002"
+        value: "\u5728\u4E0B\u662F\u9999\u7389\uFF0C\u662F\u7261\u4E39\u82B1\u5996......"
         type: 0
         typeString: 
       - title: Sequence
@@ -2700,8 +2700,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 245.79922, y: 73.09961}
-    canvasZoom: 0.7300001
+    canvasScrollPosition: {x: 264.25372, y: 247.8063}
+    canvasZoom: 0.87999994
   - id: 4
     fields:
     - title: Title
@@ -5069,8 +5069,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 359.72842, y: 569.6297}
-    canvasZoom: 1.3000001
+    canvasScrollPosition: {x: 424.6029, y: 1350.8358}
+    canvasZoom: 1.0600002
   - id: 8
     fields:
     - title: Title
@@ -5772,7 +5772,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 164, y: 0}
+    canvasScrollPosition: {x: 159.74878, y: 10.05882}
     canvasZoom: 1
   - id: 10
     fields:
@@ -11410,8 +11410,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 44.034805, y: 46.965923}
-    canvasZoom: 0.7600004
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.7000006
   - id: 28
     fields:
     - title: Title
