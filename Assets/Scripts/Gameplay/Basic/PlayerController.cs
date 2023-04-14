@@ -180,6 +180,7 @@ namespace Scripts.Gameplay.Basic
         [Header("声音")]
         [SerializeField] AudioSource WalkAudio;
         [SerializeField]AudioSource RunAudio;
+        [SerializeField] AudioSource HitAudio;
         public AudioClip hitClip;
         [SerializeField]AudioSource JumpAudio;
         void SetAudio()
@@ -323,6 +324,11 @@ namespace Scripts.Gameplay.Basic
         public override void TakeDamage(int damage)
         {
             base.TakeDamage(damage);
+            if (HitAudio)
+            {
+                HitAudio.clip = hitClip;
+                HitAudio.Play();
+            }
             HPChangeSubject.Instance.Notify(1f * currentHP / maxHP);
             if (!dead)
                 animationPlayer.Play(0, hit_base, facing, false, true);

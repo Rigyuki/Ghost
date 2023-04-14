@@ -14,10 +14,8 @@ namespace Scripts.Gameplay.EnemyAI
         [SerializeField] string eyeCloseAnim;
         [SerializeField] string eyeOpenAnim;
         Coroutine ghostCoroutine;
-        void Update()
-        {
-
-        }
+        [SerializeField] AudioSource audioSource;
+        [SerializeField] AudioClip clip;
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.layer != LayerMask.NameToLayer("Player")) return;
@@ -36,6 +34,9 @@ namespace Scripts.Gameplay.EnemyAI
         }
         IEnumerator GhostAppear(float duration)
         {
+            audioSource.clip = clip;
+            audioSource.time = 0;
+            audioSource.Play();
             float fullTime = duration;
             duration = (1 - ghostContainer.localScale.x) * fullTime;
             while (duration > 0)
@@ -45,6 +46,7 @@ namespace Scripts.Gameplay.EnemyAI
                 yield return null;
             }
             ghostContainer.localScale = Vector3.one;
+            audioSource.Stop();
         }
         IEnumerator GhostDisappear(float duration)
         {

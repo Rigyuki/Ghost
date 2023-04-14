@@ -11,6 +11,8 @@ namespace Scripts.Gameplay.Trap
         [SerializeField] SkeletonAnimation sa;
         [SerializeField] Collider treeTrap;
         bool charged = true;
+        [SerializeField] AudioSource audioSource;
+        [SerializeField] AudioClip clip;
         private void OnTriggerEnter(Collider other)
         {
             if (!charged || other.gameObject.layer != LayerMask.NameToLayer("Player"))
@@ -19,6 +21,9 @@ namespace Scripts.Gameplay.Trap
         }
         IEnumerator AfterTrigger()
         {
+            audioSource.clip = clip;
+            audioSource.time = 0;
+            audioSource.Play();
             charged = false;
             var anim = sa.state.SetAnimation(0, stretchAnimation, false);
             sa.timeScale = 1;
@@ -38,6 +43,7 @@ namespace Scripts.Gameplay.Trap
                 yield return null;
             sa.timeScale = 0;
             charged = true;
+            audioSource.Stop();
         }
     }
 }
