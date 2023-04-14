@@ -23,14 +23,9 @@ namespace Scripts.Gameplay.SceneChange
 
         }
         public void ChangeScene(string sceneName)
-        { 
-            
-                SceneManager.LoadSceneAsync(sceneName);
-            
-
-        }
-
-        
+        {            
+                SceneManager.LoadSceneAsync(sceneName);         
+        }     
     }
 }
 

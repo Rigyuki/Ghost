@@ -164,7 +164,7 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     portrait: {fileID: 2800000, guid: b6295dbd58d03c5408402015ec408722, type: 3}
-    spritePortrait: {fileID: 21300000, guid: 9f14fe7a97c1b834e9fe067dbdc4f9b8, type: 3}
+    spritePortrait: {fileID: 21300000, guid: 86ba471c6cbb1b24c8d51b7a19841adc, type: 3}
     alternatePortraits: []
     spritePortraits: []
   - id: 7
@@ -15082,7 +15082,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.97
+    canvasZoom: 0.9100001
   syncInfo:
     syncActors: 0
     syncItems: 0
