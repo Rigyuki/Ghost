@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
-  m_Name: white flower_Atlas 1
+  m_Name: white flower_Atlas 2
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: 3feb1dc4335cba94dbb6d2a5b657bdc8, type: 3}
+  atlasFile: {fileID: 4900000, guid: 884342be339ef4a478ded158563120ca, type: 3}
   materials:
-  - {fileID: 2100000, guid: ff18dc6388559824cb4f150c20d6c67e, type: 2}
+  - {fileID: 2100000, guid: 65837a866f0e1fa4980d71bb55e41793, type: 2}

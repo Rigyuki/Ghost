@@ -108,6 +108,8 @@ public class EnemyController : MonoBehaviour
     private void EnemyChasing()
     {
         //Debug.Log("chasing");
+        if(!walkAudioSource.isPlaying)
+            walkAudioSource.Play();
         aniAttack.gameObject.SetActive(true);
         aniAttack.Play(0, enemy_chase_base, facing, true);
         ani.gameObject.SetActive(false);
