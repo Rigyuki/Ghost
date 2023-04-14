@@ -35,7 +35,7 @@ namespace Scripts.Gameplay.MoveObject
         }
         IEnumerator _movingStone()
         {
-            Stone.transform.DOMove(new Vector3(1.26f, -0.05f, 2.549f), 2f);
+            Stone.transform.DOMove(new Vector3(1.95f, -0.05f, 4.02f), 2f);
             yield return null;
         }
         IEnumerator SetBoolBrige()
