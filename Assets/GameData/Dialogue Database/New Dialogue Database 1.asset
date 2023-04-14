@@ -5552,7 +5552,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 7906a541-9bfb-4662-aea9-f8620d57bcff
+        value: 03215272-9d35-4589-8cb7-b9b27ee1db73
         type: 0
         typeString: 
       conversationID: 9
@@ -5581,7 +5581,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 79, y: 113}
+    canvasScrollPosition: {x: 164, y: 0}
     canvasZoom: 1
   - id: 10
     fields:

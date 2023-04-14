@@ -178,40 +178,27 @@ namespace Scripts.Gameplay.Basic
 
         #region Audio
         [Header("声音")]
-        [SerializeField] AudioSource audioSource;
-        public AudioClip moveClip;
-        public AudioClip runClip;
+        [SerializeField] AudioSource WalkAudio;
+        [SerializeField]AudioSource RunAudio;
         public AudioClip hitClip;
-        public AudioClip jumpClip;
+        [SerializeField]AudioSource JumpAudio;
         void SetAudio()
         {
             if(frozen)
                 return;
-            if (audioSource.isPlaying )
+            if(walking&&!WalkAudio.isPlaying)
+                WalkAudio.Play();
+            else if(dashing&&!RunAudio.isPlaying)
             {
-                return;
+                if(WalkAudio.isPlaying)
+                    WalkAudio.Pause();
+                RunAudio.Play();
             }
-            if(!grounded)
+            else if(!grounded&&!JumpAudio.isPlaying)
             {
-                audioSource.Pause();
-                audioSource.clip = jumpClip;
-                audioSource.Play();
-            }
-            else if(dashing)
-            {
-                audioSource.Pause();
-                audioSource.clip = runClip;
-                audioSource.Play();
-            }
-            else if(walking)
-            {
-                audioSource.clip = moveClip;
-                audioSource.Play();
-            }
-
-            else 
-            {
-                audioSource.Pause();
+                if(WalkAudio.isPlaying)
+                    WalkAudio.Pause();
+                JumpAudio.Play();
             }
 
             
