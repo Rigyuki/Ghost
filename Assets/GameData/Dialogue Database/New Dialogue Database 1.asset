@@ -928,6 +928,20 @@ MonoBehaviour:
       value: "\u662F\u5426\u70B9\u51FB\u4E86\u4EA4\u4E92\u6309\u94AE\uFF08\u4E3A\u4E86alert\u70B9\u51FBcontinue\u4E4B\u540E\u624D\u8FDB\u884C\u4E0B\u4E00\u4E2A"
       type: 0
       typeString: CustomFieldType_Text
+  - id: 27
+    fields:
+    - title: Name
+      value: isCrow
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: "\u662F\u5426\u4E4C\u9E26"
+      type: 0
+      typeString: CustomFieldType_Text
   conversations:
   - id: 1
     fields:
@@ -5159,7 +5173,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 398
-        y: 34
+        y: 32.96907
         width: 160
         height: 30
     - id: 1
@@ -5315,7 +5329,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["isCrow"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5369,7 +5383,7 @@ MonoBehaviour:
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["isCrow"] == false
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -5436,8 +5450,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 64.224075, y: 12.345352}
-    canvasZoom: 0.97
+    canvasScrollPosition: {x: 72.85712, y: 237.14278}
+    canvasZoom: 0.7000003
   - id: 9
     fields:
     - title: Title
