@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene1_Test/Scene1_Lantern.unity
     guid: bc107f282553bda418e294f4168b8b16
   - enabled: 1
-    path: Assets/Scenes/Scene1_Test/Part14567Scene1Main.unity
+    path: Assets/Scenes/Scene1_Test/Scene1Main.unity
     guid: 74b9ef03108c4f143ad4fe158a5a6155
   - enabled: 1
     path: Assets/Scenes/Scene1_Test/testTaichi.unity

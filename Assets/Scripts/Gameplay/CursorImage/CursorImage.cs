@@ -17,27 +17,7 @@ namespace Scripts.Gameplay.CursorImage
         private void Update()
         {
             goName=this.name.ToString();
-            /*Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hitInfo;
-            if (Physics.Raycast(ray, out hitInfo))
-            {
-                go = hitInfo.collider.gameObject;
-                goName = go.name.ToString();
-                Debug.Log(goName);
-            }    
-                */
         }
-
-        /*    private void OnMouseEnter()
-            {
-                startImg.sprite = Resources.Load($"GameStart/{goName}_Cursor", typeof(Sprite)) as Sprite;
-
-            }
-
-            private void OnMouseExit()
-            {
-                startImg.sprite = Resources.Load($"GameStart/{goName}", typeof(Sprite)) as Sprite;
-            }*/
 
         public void OnPointerExit(PointerEventData eventData)
         {
@@ -56,7 +36,7 @@ namespace Scripts.Gameplay.CursorImage
         {
             if(goName == "StartGame")
             {
-                SceneManager.LoadSceneAsync("MainScene");
+                SceneManager.LoadSceneAsync("Scene1Main");
             }else if(goName == "QuitGame")
             {
 #if UNITY_EDITOR
