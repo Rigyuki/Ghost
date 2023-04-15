@@ -19,6 +19,7 @@ namespace Scripts.Gameplay.Chase
         [SerializeField] GameObject snake;
         [SerializeField] DialogueSystemController dialogueManager;
         [SerializeField] GameObject dialogueBox;
+        [CustomTool.EditorTools.SceneName] public string targetScene;
         private void OnEnable()
         {
             MsgCenterByList.AddListener(OnMsg);
@@ -76,7 +77,7 @@ namespace Scripts.Gameplay.Chase
             }
             whiteImage.color = Color.black;
             yield return new WaitForSeconds(1f);
-            UnityEngine.SceneManagement.SceneManager.LoadScene(gameObject.scene.name);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(targetScene);
         }
         IEnumerator TrigramAppear()
         {
@@ -126,7 +127,7 @@ namespace Scripts.Gameplay.Chase
             }
             whiteImage.color = Color.white;
             yield return new WaitForSeconds(1f);
-            UnityEngine.SceneManagement.SceneManager.LoadScene(gameObject.scene.name);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(targetScene);
         }
         IEnumerator TrigramRotate()
         {

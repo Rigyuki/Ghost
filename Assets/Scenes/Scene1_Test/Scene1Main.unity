@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1897587927}
-  m_IndirectSpecularColor: {r: 0.16559908, g: 0.24230522, b: 0.34105834, a: 1}
+  m_IndirectSpecularColor: {r: 0.16559035, g: 0.24231488, b: 0.3410575, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -85784,6 +85784,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &1686821220 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3735311759913661643, guid: fa87e112192c7074a8edcc6716215126,
+    type: 3}
+  m_PrefabInstance: {fileID: 702278444}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d85b887af7e6c3f45a2e2d2920d641bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1699045676 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1046441328749723850, guid: 658f3a4a18f5eaa40a5639f966241ef5,
@@ -97257,11 +97269,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11424616, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: singleton
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: initialDatabase
       value: 
       objectReference: {fileID: 11400000, guid: a7f2013fa159a824dbc585ca2d22e7d6,
         type: 2}
+    - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: dontDestroyOnLoad
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.dialogueUI
       value: 
@@ -101279,7 +101299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GhostBook: {fileID: 840943159920514308}
   TaichiTrigrams: {fileID: 803147167003503532}
-  sg: {fileID: 0}
+  sg: {fileID: 1686821220}
 --- !u!114 &1879820881683186351
 MonoBehaviour:
   m_ObjectHideFlags: 0
